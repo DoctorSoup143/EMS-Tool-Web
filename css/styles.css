@@ -1,6 +1,6 @@
 body {
-    background: rgb(9, 9, 121);
-    background: linear-gradient(180deg, rgba(9, 9, 121, 1) 29%, rgba(0, 212, 255, 1) 100%);
+    background: rgb(9,9,121);
+    background: linear-gradient(180deg, rgba(9,9,121,1) 32%, rgba(0,172,255,1) 100%);
     margin: 0px;
     font-size: 14px;
     height: 100%;
@@ -176,8 +176,13 @@ No media query since this is the default in Bootstrap because it is "mobile firs
 .title {
     font-size: 35px;
     margin-top: 20px;
-    /*	margin-left: 40%; */
     text-align: center;
+}
+
+.title2 {
+    font-size: 20px;
+    margin-bottom: 0px;
+    text-align: left;
 }
 
 .form-header {
@@ -190,7 +195,8 @@ No media query since this is the default in Bootstrap because it is "mobile firs
     width: 100%;
     font-family: Teko !important;
     font-size: 20px;
-    margin-top: 20px;
+    margin-top: 5px;
+    margin-bottom: 10px;
     padding: 8px;
     color: #fff;
     border-color: #ffffff00;
@@ -212,7 +218,8 @@ No media query since this is the default in Bootstrap because it is "mobile firs
     width: 100%;
     font-family: Teko !important;
     font-size: 20px;
-    margin-top: 10px;
+    margin-top: 5px;
+    margin-bottom: 10px;
     padding: 8px;
     color: #fff;
     border-color: #ffffff00;
@@ -236,7 +243,8 @@ No media query since this is the default in Bootstrap because it is "mobile firs
     width: 100%;
     font-family: Teko !important;
     font-size: 20px;
-    margin-top: 10px;
+    margin-top: 5px;
+    margin-bottom: 10px;
     padding: 8px;
     color: #fff;
     border-color: #ffffff00;
@@ -259,7 +267,8 @@ No media query since this is the default in Bootstrap because it is "mobile firs
     width: 100%;
     font-family: Teko !important;
     font-size: 20px;
-    margin-top: 10px;
+    margin-top: 5px;
+    margin-bottom: 10px;
     padding: 8px;
     color: #fff;
     border-color: #ffffff00;
@@ -281,7 +290,7 @@ No media query since this is the default in Bootstrap because it is "mobile firs
 #input4 {
     font-family: Teko !important;
     width: 50%;
-    margin-top: 20px;
+    margin-top: 0px;
     margin-bottom: 100px;
     margin-left: 25%;
     padding: 8px;

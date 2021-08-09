@@ -43,13 +43,13 @@
             <a href=""><img src="media/logo.png" width="50" height="50"></a>
             <ul>
                 <li>
-                    <a href="https://DoctorSoup143.tv/" class="hover_link">Home</a>
+                    <a href="" class="hover_link">Home</a>
                 </li>
                 <li>
-                    <a href="https://DoctorSoup143.tv/About" class="hover_link">About</a>
+                    <a href="" class="hover_link">About</a>
                 </li>
                 <li>
-                    <a href="https://DoctorSoup143.tv/Contact" class="hover_link">Contact</a>
+                    <a href="" class="hover_link">Contact</a>
                 </li>
             </ul>
         </nav>
@@ -73,10 +73,13 @@
             <div class="col-12 col-md-6 offset-md-3">
                 <p class="title">Patient Demographics</p>
                 <form>
+                    <p class="title2">Patient Name:</p>
                     <input id="input1" name="Name" placeholder="Patient Name" required>
+                    <p class="title2">Patient Age:</p>
                     <input id="input11" name="Age" placeholder="Patient Age" required>
+                    <p class="title2">Patient Sex:</p>
                     <select id="input2" name="Sex" required>
-                        <option value="" selected disabled hidden>Patient Sex</option>
+                        <option value="" selected disabled hidden></option>
                         <option value="Male">Male</option>
                         <option value="Female">Female</option>
                     </select>
@@ -97,13 +100,15 @@
             <div class="col-12 col-md-6 offset-md-3">
                 <p class="title">Visit Information</p>
                 <form>
+                    <p class="title2">Arrival Mode:</p>
                     <select id="input2" name="Arrival Mode" required>
-                        <option value="" selected disabled hidden>Arrival Mode</option>
+                        <option value="" selected disabled hidden></option>
                         <option value="Ambulance">Ambulance</option>
                         <option value="Walk In">Walk In</option>
                     </select>
+                    <p class="title2">Chief Complaint:</p>
                     <select id="input2" name="Chief Complaint" required>
-                        <option value="" selected disabled hidden>Chief Complaint</option>
+                        <option value="" selected disabled hidden></option>
                         <option value="Laceration">Laceration</option>
                         <option value="Lac FB">Laceration With Foreign Body</option>
                         <option value="Head Injury">Head Injury</option>
@@ -119,8 +124,9 @@
                         <option value="Reaction Mild">Allergic Reaction (Mild)</option>
                         <option value="Reaction Severe">Allergic Reaction (Severe)</option>
                     </select>
+                    <p class="title2">Injury/Pain Location:</p>
                     <select id="input2" name="Chief Complaint" required>
-                        <option value="" selected disabled hidden>Location</option>
+                        <option value="" selected disabled hidden></option>
                         <option value="Head">Head</option>
                         <option value="Thorax Heart">Thorax (Upper Left Quadrant)</option>
                         <option value="Thorax">Thorax</option>
@@ -130,6 +136,37 @@
                         <option value="Groin">Groin</option>
                         <option value="L Leg">Leg (Left)</option>
                         <option value="R Leg">Leg (Right)</option>
+                    </select>
+                    <p class="title2">Pain Severity:</p>
+                    <select id="input2" name="Chief Complaint" required>
+                        <option value="" selected disabled hidden></option>
+                        <option value="1">1/10</option>
+                        <option value="2">2/10</option>
+                        <option value="3">3/10</option>
+                        <option value="4">4/10</option>
+                        <option value="5">5/10</option>
+                        <option value="6">6/10</option>
+                        <option value="7">7/10</option>
+                        <option value="8">8/10</option>
+                        <option value="9">9/10</option>
+                        <option value="10">10/10</option>
+                    </select>
+                    <p class="title2">Modifying Factors:</p>
+                    <select id="input2" name="Chief Complaint" required>
+                        <option value="" selected disabled hidden>Are There Modifying Factors?</option>
+                        <option value="Yes">Yes</option>
+                        <option value="No">No</option>
+                    </select>
+                    <input id="input11" name="Age" placeholder="Modifying Factors" required>
+                    <p class="title2">Pain Quality:</p>
+                    <select id="input2" name="Chief Complaint" required>
+                        <option value="" selected disabled hidden>Pain Quality</option>
+                        <option value="Sharp">Sharp</option>
+                        <option value="Dull">Dull</option>
+                        <option value="Throbbing">Throbbing</option>
+                        <option value="Stabbing">Stabbing</option>
+                        <option value="Burning">Burning</option>
+                        <option value="Numb">Numb-like</option>
                     </select>
                     <button id="input4" type="submit">Generate Report</button>
                 </form>
