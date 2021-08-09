@@ -14,8 +14,8 @@
     <meta http-equiv="Pragma" content="no-cache" />
     <meta http-equiv="Expires" content="0" />
     <!-- Page Properties -->
-    <title>Home | DoctorSoup143</title>
-    <meta name="description" content="Broadcaster, competitive team founder, and multiplatform content creator.">
+    <title>EMS Diagnosis Tool</title>
+    <meta name="description" content="A GTA RP tool designed to make EMS diagnosis easier and more efficient.">
     <meta name="author" content="DoctorSoup143">
     <meta property="og:image" content="media/logo.png" />
     <link rel="icon" href="media/logo.ico" type="image/x-icon" />
@@ -49,9 +49,6 @@
                     <a href="https://DoctorSoup143.tv/About" class="hover_link">About</a>
                 </li>
                 <li>
-                    <a href="https://TheTarkovHandbook.DoctorSoup143.tv/" class="hover_link">Handbook</a>
-                </li>
-                <li>
                     <a href="https://DoctorSoup143.tv/Contact" class="hover_link">Contact</a>
                 </li>
             </ul>
@@ -65,73 +62,92 @@
     <!-- Name & Description -->
     <div class="container-fluid">
         <div class="text-div" align="center">
-            <p style=" font-size: 45px;">DoctorSoup143</p>
-            <p style=" font-size: 30px;">BROADCASTER, STUDIO FOUNDER, AND MULTIPLATFORM CONTENT CREATOR.</p>
+            <p style=" font-size: 30px;">EMS Diagnosis Tool</p>
         </div>
-        <div class="row justify-content-md-center">
-            <div class="col-0" align="center">
-                <a href="https://www.twitch.tv/DoctorSoup143" target="_blank" class="Twitch-button"><span class="left"><i class="far fa-heart"></i></span><span class="right">Follow</span></a>
-            </div>
-            <div class="col-0" align="center">
-                <a href="https://streamlabs.com/DoctorSoup143" target="_blank" class="Twitch-button"><span class="left"><i class="fas fa-hand-holding-usd"></i></span><span class="right">Send A Tip</span></a>
-            </div>
-            <div class="col-0" align="center">
-                <a href="https://www.twitch.tv/products/doctorsoup143" target="_blank" class="Twitch-button"><span class="left"><i class="far fa-star"></i></span><span class="right">Subscribe</span></a>
-            </div>
-        </div>
-        <br>
+        <br />
+        <br />
+        <br />
 
-        <!-- Channel Trailer -->
-        <div class="row justify-content-md-center">
-            <div class="col-12 col-md-8">
-                <video id="video" class="video" autoplay controls>
-                    <source src="media/elite.mp4" type="video/mp4">
-                    Your browser doesn't support playing this video.
-                </video>
-                <!-- Set Volume To 40% -->
-                <script>
-                    document.getElementById("video").volume = 0.15;
-
-                </script>
+        <!-- Demographics -->
+        <div class="row">
+            <div class="col-12 col-md-6 offset-md-3">
+                <p class="title">Patient Demographics</p>
+                <form>
+                    <input id="input1" name="Name" placeholder="Patient Name" required>
+                    <input id="input11" name="Age" placeholder="Patient Age" required>
+                    <select id="input2" name="Sex" required>
+                        <option value="" selected disabled hidden>Patient Sex</option>
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                    </select>
+                    <br />
+                    <br />
+                    <p class="title">Patient Story</p>
+                    <textarea id="input3" name="Story" placeholder="The patient was..." required></textarea>
+                </form>
             </div>
         </div>
-        <br>
-        <br>
-        <br>
+        <br />
+        <br />
+        <br />
+        <br />
 
-        <!-- Discord iFrame -->
-        <div class="row justify-content-md-center">
-            <div class="col-12 col-md-3" align="center">
-                <iframe id="discord" src="https://discordapp.com/widget?id=147039228830810112&amp;theme=dark"></iframe>
-            </div>
-
-            <!-- YouTube iFrame -->
-            <div class="col-12 col-md-5" align="center">
-                <iframe id="youtube" src="https://www.youtube.com/embed/videoseries?list=PLP0S2sZXpd0M2AZxS9ActYzlc9AAJXJE-&showinfo=1&rel=0"></iframe>
-
-                <!-- Specs & Spotify Tiles -->
-                <button class="tiles" onclick="window.location.href='https://open.spotify.com/user/qpxp7w8922gn0gd25b6xwv2v7?si=VC5li0fGS8asgzrOJ2JBGg'"><i class="fab fa-spotify"></i>
-                    <button class="tiles" onclick="window.location.href='https://www.youtube.com/channel/UC2LgikNXNwuHifq7XpQD4vA?view_as=subscriber'"><i class="fab fa-youtube"></i></button>
-                    <button class="tiles" onclick="window.location.href='https://DoctorSoup143.tv/Merch'"><i class="fas fa-tshirt"></i></button>
-                    <button class="tiles" onclick="window.location.href='https://twitter.com/DoctorSoup143'"><i class="fab fa-twitter"></i></button>
-                    <button class="tiles" onclick="window.location.href='https://DoctorSoup143.tv/Specs'"><i class="fas fa-desktop"></i></button>
-                    <button class="tiles" onclick="window.location.href='https://www.instagram.com/DoctorSoup143/'"><i class="fab fa-instagram"></i></button>
-            </div>
-
-            <!-- Twitter iFrame -->
-            <div class="col-12 col-md-3" align="center">
-                <a class="twitter-timeline" data-width="100%" data-height="50.5em" data-theme="dark" href="https://twitter.com/DoctorSoup143">Tweets by DoctorSoup143</a>
-                <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        <!-- Visit Information -->
+        <div class="row">
+            <div class="col-12 col-md-6 offset-md-3">
+                <p class="title">Visit Information</p>
+                <form>
+                    <select id="input2" name="Arrival Mode" required>
+                        <option value="" selected disabled hidden>Arrival Mode</option>
+                        <option value="Ambulance">Ambulance</option>
+                        <option value="Walk In">Walk In</option>
+                    </select>
+                    <select id="input2" name="Chief Complaint" required>
+                        <option value="" selected disabled hidden>Chief Complaint</option>
+                        <option value="Laceration">Laceration</option>
+                        <option value="Lac FB">Laceration With Foreign Body</option>
+                        <option value="Head Injury">Head Injury</option>
+                        <option value="Arm Injury">Arm Injury</option>
+                        <option value="Leg Injury">Leg Injury</option>
+                        <option value="GSW">Gun Shot Wound</option>
+                        <option value="Puncture">Puncture Wound (Any)</option>
+                        <option value="Chest Pain">Chest Pain</option>
+                        <option value="Syncope">Syncopal Episode</option>
+                        <option value="Burn">Burn (Any)</option>
+                        <option value="Abdominal Pain">Abdominal Pain</option>
+                        <option value="Pain Male">Pain (Male Genitalia)</option>
+                        <option value="Reaction Mild">Allergic Reaction (Mild)</option>
+                        <option value="Reaction Severe">Allergic Reaction (Severe)</option>
+                    </select>
+                    <select id="input2" name="Chief Complaint" required>
+                        <option value="" selected disabled hidden>Location</option>
+                        <option value="Head">Head</option>
+                        <option value="Thorax Heart">Thorax (Upper Left Quadrant)</option>
+                        <option value="Thorax">Thorax</option>
+                        <option value="L Arm">Arm (Left)</option>
+                        <option value="R Arm">Arm (Right)</option>
+                        <option value="Abdomen">Abdomen</option>
+                        <option value="Groin">Groin</option>
+                        <option value="L Leg">Leg (Left)</option>
+                        <option value="R Leg">Leg (Right)</option>
+                    </select>
+                    <button id="input4" type="submit">Generate Report</button>
+                </form>
             </div>
         </div>
 
-        <!-- Particles Background -->
+
+
+
+
+
+        <!-- Particles Background 
         <div id="particles-js"></div>
         <script type="text/javascript" src="js/particles.js"></script>
         <script type="text/javascript" src="js/app.js"></script>
         <br>
         <br>
-
+-->
     </div>
 </body>
 
