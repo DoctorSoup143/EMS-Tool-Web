@@ -49,7 +49,7 @@
                     <a href="" class="hover_link">About</a>
                 </li>
                 <li>
-                    <a href="" class="hover_link">Contact</a>
+                    <a href="https://doctorsoup143.tv/Contact" class="hover_link">Contact</a>
                 </li>
             </ul>
         </nav>
@@ -111,14 +111,14 @@
                     <option value="a Laceration With Foreign Body.">Laceration With Foreign Body</option>
                     <option value="a Head Injury.">Head Injury</option>
                     <option value="a severe Head Injury.">Concussion</option>
-                    <option value="an Arm Injury.">Contusion (Arm)</option>
-                    <option value="a Leg Injury.">Contusion (Leg)</option>
-                    <option value="a severe Arm Injury.">Fracture (Arm)</option>
-                    <option value="a severe Leg Injury.">Fracture (Leg)</option>
+                    <option value="an Arm Injury.">Arm Injury (Minor)</option>
+                    <option value="a Leg Injury.">Leg Injury (Minor)</option>
+                    <option value="a severe Arm Injury.">Arm Injury (Severe)</option>
+                    <option value="a severe Leg Injury.">Leg Injury (Severe)</option>
                     <option value="a Gun Shot Wound.">Gun Shot Wound</option>
                     <option value="a Puncture Wound.">Puncture Wound (Any)</option>
-                    <option value="Chest Pain.">Chest Pain</option>
-                    <option value="severe chest pain.">STEMI</option>
+                    <option value="Chest Pain.">Chest Pain (Moderate)</option>
+                    <option value="severe chest pain.">Chest Pain (Severe)</option>
                     <option value="a Syncopal Episode.">Syncopal Episode</option>
                     <option value="a Burn.">Burn (Any)</option>
                     <option value="Abdominal Pain.">Abdominal Pain</option>
@@ -200,6 +200,10 @@
                         <p id="diagnosis" style="font-size: 25px; text-align: center;"></p>
                         <br />
                         <br />
+                        <p class="title">DOCTORS ORDERS</p>
+                        <p id="orders" style="font-size: 25px;"></p>
+                        <br />
+                        <br />
                         <p class="title">PROCEDURE NOTE</p>
                         <p id="procedure" style="font-size: 25px;"></p>
 
@@ -214,7 +218,7 @@
                                 let y = '';
                                 switch (document.getElementById("ChiefComplaint").value) {
                                     case 'a Laceration.':
-                                        y = 'The area was prepped and draped in the usual sterile fashion. Local anesthesia was achieved using Lidocaine 1% with epinephrine. The wound was copiously irrigated. # 3-0 Nylon interrupted sutures were placed. Estimated blood loss was less than 0.5 mL. A dressing was applied to the area and post-procedure care, was explained. Return precautions are given. The patient tolerated the procedure well without complications.';
+                                        y = 'The area was prepped and draped in the usual sterile fashion. Local anesthesia was achieved using Lidocaine 1% with epinephrine. The wound was copiously irrigated. 6 3-0 Nylon interrupted sutures were placed. Estimated blood loss was less than 0.5 mL. A dressing was applied to the area and post-procedure care, was explained. Return precautions are given. The patient tolerated the procedure well without complications.';
                                         break;
 
                                     case 'a Laceration With Foreign Body.':
@@ -230,35 +234,35 @@
                                         break;
 
                                     case 'an Arm Injury.':
-                                        y = 'X-rays revealed no fractures and good alignment. Patient was administered Acetaminophen for pain. Return precautions are given. Patient to D/C home.';
+                                        y = 'X-rays revealed no fractures and good alignment. Patient was administered Acetaminophen for pain. Return precautions are given. Patient to D/C home without complications.';
                                         break;
 
                                     case 'a Leg Injury.':
-                                        y = 'X-rays revealed no fractures and good alignment. Patient was administered Acetaminophen for pain. Return precautions are given. Patient to D/C home.';
+                                        y = 'X-rays revealed no fractures and good alignment. Patient was administered Acetaminophen for pain. Return precautions are given. Patient to D/C home without complications.';
                                         break;
 
                                     case 'a severe Arm Injury.':
-                                        y = 'Patient was started on fluids, 0.9 normal saline at 100mL per hour. Conscious sedation was achieved via propofol via the emergency department staff. Afterwards, traction with re-creation of the injury pattern was utilized to achieve reduction of the patients fracture. This was confirmed with image intensifier. Subsequently, the patient was placed into a splint. The patient was aroused from conscious sedation and at this time it was noted that the patient had full sensation. Post-reduction x-rays revealed good alignment. The lateral x-rays also revealed adequate reduction. At this time, we will allow the patient to be discharged home.';
+                                        y = 'X-rays revealed a fracture with poor alignment. Patient was administered Morphine for pain. Patient was started on fluids, 0.9 normal saline at 100mL per hour. Conscious sedation was achieved via propofol administered by the emergency department staff. Afterwards, traction with re-creation of the injury pattern was utilized to achieve reduction of the patients fracture. This was confirmed with an image intensifier. Subsequently, the patient was placed into a splint. The patient was aroused from conscious sedation and at this time and it was noted that the patient had full sensation. Post-reduction x-rays revealed good alignment. The lateral x-rays also revealed an adequate reduction. The patients pain is managed with medication, and at this time, we will allow the patient to be discharged home.';
                                         break;
 
                                     case 'a severe Leg Injury.':
-                                        y = 'X-rays revealed multiple hairline fractures and good alignment. Patient was placed into a splint. Patient was administered Morphine for pain. Return precautions are given. Patient to D/C home.';
+                                        y = 'X-rays revealed multiple hairline fractures and good alignment. The patient was administered Morphine for pain and placed into a splint. Return precautions are given. Follow up care has been coordinated. Patient to D/C home without complications.';
                                         break;
 
                                     case 'a Gun Shot Wound.':
-                                        y = 'The area was prepped and draped in the usual sterile fashion. Local anesthesia was achieved using Lidocaine 1% with epinephrine. The wound was copiously irrigated. Patient transported to operating room. An IV was instituted in the preoperative holding area. The patient was transported to the operating room and placed on the operating table in a supine position with a safety strap across the lap. General anesthesia was administered. The area was then prepped and draped in the usual sterile orthopedic fashion. The stockinette was reflected and the thorax was cleansed with a wet and dry sponge. There was noted to be some remaining periwound erythema. There was noted to be some mild crepitation about 2cm proximal from the entry wound. Upon inspection of the wound, there was noted to be hard foreign filling substance deep within the wound. The entry site from the foreign body was extended proximally about 0.5 cm. At this time, a large foreign body was visualized and removed with a straight stat. The area was carefully inspected for any remaining piece of foreign body. The area was palpated and there was no more remaining foreign body noted. There was no purulent drainage expressed. Area was flushed with copious amounts of sterile saline. Pulse lavage was performed with 3 liters of plain sterile saline. Wound cultures were obtained, aerobic and aerobic. The wound was then again inspected for any remaining foreign body or purulent drainage. None was noticed. The wound was packed with sterile new gauze, and dressings consisted of 4x4s, ABDs, Kling, and Kerlix. The patient tolerated the above procedure and anesthesia well without complications.';
+                                        y = 'The area was prepped and draped in the usual sterile fashion. Local anesthesia was achieved using Lidocaine 1% with epinephrine. The wound was copiously irrigated. Patient transported to operating room. An IV was instituted in the preoperative holding area. The patient was transported to the operating room and placed on the operating table in a supine position with a safety strap across the lap. General anesthesia was administered. The area was then prepped and draped in the usual sterile orthopedic fashion. The stockinette was reflected and the thorax was cleansed with a wet and dry sponge. There was noted to be some remaining periwound erythema. There was noted to be some mild crepitation about 2cm proximal from the entry wound. Upon inspection of the wound, there was noted to be hard foreign filling substance deep within the wound. The entry site from the foreign body was extended proximally about 0.5 cm. At this time, a large foreign body was visualized and removed with a straight stat. The area was carefully inspected for any remaining piece of foreign body. The area was palpated and there was no more remaining foreign body noted. There was no purulent drainage expressed. Area was flushed with copious amounts of sterile saline. Pulse lavage was performed with 3 liters of plain sterile saline. Wound cultures were obtained, aerobic and aerobic. The wound was then again inspected for any remaining foreign body or purulent drainage. None was noticed at this time. The wound was packed with sterile new gauze, and dressings consisted of 4x4s, ABDs, Kling, and Kerlix. The patient tolerated the above procedure and anesthesia well without complications. Patient is to D/C home after observation. Return precautions were given.';
                                         break;
 
                                     case 'a Puncture Wound.':
-                                        y = 'The area was prepped and draped in the usual sterile fashion. Local anesthesia was achieved using Lidocaine 1% with epinephrine. The wound was copiously irrigated. Patient transported to operating room. An IV was instituted in the preoperative holding area. The patient was transported to the operating room and placed on the operating table in a supine position with a safety strap across the lap. General anesthesia was administered. The area was then prepped and draped in the usual sterile orthopedic fashion. The stockinette was reflected and the thorax was cleansed with a wet and dry sponge. There was noted to be some remaining periwound erythema. There was noted to be some mild crepitation about 2cm proximal from the entry wound. Upon inspection of the wound, there was noted to no foreign body within the wound. The area was flushed with copious amounts of sterile saline. Pulse lavage was performed with 3 liters of plain sterile saline. Wound cultures were obtained. The wound was then again inspected for purulent drainage. None was noticed. The wound was packed with sterile new gauze, and dressings consisted of 4x4s, ABDs, Kling, and Kerlix. The patient tolerated the above procedure and anesthesia well without complications.';
+                                        y = 'The area was prepped and draped in the usual sterile fashion. Local anesthesia was achieved using Lidocaine 1% with epinephrine. The wound was copiously irrigated. Patient transported to operating room. An IV was instituted in the preoperative holding area. The patient was transported to the operating room and placed on the operating table in a supine position with a safety strap across the lap. General anesthesia was administered. The area was then prepped and draped in the usual sterile orthopedic fashion. The stockinette was reflected and the thorax was cleansed with a wet and dry sponge. There was noted to be some remaining periwound erythema. There was noted to be some mild crepitation about 2cm proximal from the entry wound. Upon inspection of the wound, there was noted to be no foreign body within the wound. The area was flushed with copious amounts of sterile saline. Pulse lavage was performed with 3 liters of plain sterile saline and wound cultures were obtained. The wound was then again inspected for purulent drainage or any foreign body. None was noticed. The wound was packed with sterile new gauze, and dressings consisted of 4x4s, ABDs, Kling, and Kerlix. The patient tolerated the above procedure and anesthesia well without complications.';
                                         break;
 
                                     case 'Chest Pain.':
-                                        y = 'Patient was started on fluids, 0.9 normal saline at 100 mL per hour. Myoglobin, CK-MB mass, Trop. T, and Top. I all within normal limits. Chest x-ray appears normal. Electrocardiogram shows normal sinus rhythm with no acute ST or T-wave segment changes. There were no acute changes seen on the electrocardiogram. O2 saturation is 99%. Patient under observation until symptoms subside. The patient received 45 cc of Mylanta and 10 cc of viscous lidocaine. The patients pain is managed with medication.The patient states there is complete relief of his chest pain. Return precautions are given. Patient is to DC home.';
+                                        y = 'Patient was started on fluids, 0.9 normal saline at 100 mL per hour. Myoglobin, CK-MB mass, Trop. T, and Top. I all within normal limits. Chest x-ray appears normal. Electrocardiogram shows normal sinus rhythm with no acute ST or T-wave segment changes. There were no acute changes seen on the electrocardiogram. O2 saturation is 99%. Patient under observation until symptoms subside. The patient received 45 cc of Mylanta and 10 cc of viscous lidocaine. The patients pain is managed with medication.The patient states there is complete relief of his chest pain. Return precautions are given. Patient is to DC home after observation. Return precautions were given.';
                                         break;
 
                                     case 'severe chest pain.':
-                                        y = 'Patient was started on fluids, 0.9 normal saline at 100 mL per hour. Patient was administered an electrocardiogram within 5mins of the emergency department stay. Readings show symptoms of an ST segment elevation myocardial infarction. O2 saturation is at 97%. The patient was administered Aspirin for clot prevention and Nitroglycerin to reduce the patients pain. The patient was placed on continuous monitoring through the emergency department stay. After further evaluation, benazepril was administered to improve blood flow. The patients symptoms after their emergency department stay seem to be alleviating. The patient is to follow up with a cardiologist tomorrow morning. Patient to DC home.';
+                                        y = 'Patient was started on fluids, 0.9 normal saline at 100 mL per hour. Patient was administered an electrocardiogram within 5mins of the emergency department stay. Readings show symptoms of an ST segment elevation myocardial infarction. O2 saturation is at 97%. The patient was administered Aspirin and Nitroglycerin. The patient was placed on continuous monitoring through their emergency department stay. After further evaluation, Benazepril was administered. The patients symptoms during their emergency department stay appear to be alleviating. The patient is to follow up with a cardiologist tomorrow morning. Patient to DC home without complications. Return precautions were given.';
                                         break;
 
                                     case 'a Syncopal Episode.':
@@ -386,6 +390,94 @@
                                 }
 
                                 document.getElementById('diagnosis').innerHTML = z;
+
+                                let o = '';
+                                switch (document.getElementById("ChiefComplaint").value) {
+                                    case 'a Laceration.':
+                                        o = 'NEEDS NOTE';
+                                        break;
+
+                                    case 'a Laceration With Foreign Body.':
+                                        o = 'NEEDS NOTE';
+                                        break;
+
+                                    case 'a Head Injury.':
+                                        o = 'NEEDS NOTE';
+                                        break;
+
+                                    case 'a severe Head Injury.':
+                                        o = 'NEEDS NOTE';
+                                        break;
+
+                                    case 'an Arm Injury.':
+                                        o = 'NEEDS NOTE';
+                                        break;
+
+                                    case 'a Leg Injury.':
+                                        o = 'NEEDS NOTE';
+                                        break;
+
+                                    case 'a severe Arm Injury.':
+                                        o = '- Sodium Chloride 0.9% 1000ml KCl 100 ml/hr IV <br/>- Propofol 25ml/hr <br/>- X-Ray forearm 2 views';
+                                        break;
+
+                                    case 'a severe Leg Injury.':
+                                        o = 'NEEDS NOTE';
+                                        break;
+
+                                    case 'a Gun Shot Wound.':
+                                        o = 'NEEDS NOTE';
+                                        break;
+
+                                    case 'a Puncture Wound.':
+                                        o = 'NEEDS NOTE';
+                                        break;
+
+                                    case 'Chest Pain.':
+                                        o = 'NEEDS NOTE';
+                                        break;
+
+                                    case 'severe chest pain.':
+                                        o = 'NEEDS NOTE';
+                                        break;
+
+                                    case 'a Syncopal Episode.':
+                                        o = 'NEEDS NOTE';
+                                        break;
+
+                                    case 'a Burn.':
+                                        o = 'NEEDS NOTE';
+                                        break;
+
+                                    case 'Abdominal Pain.':
+                                        o = 'NEEDS NOTE';
+                                        break;
+
+                                    case 'male genital pain.':
+                                        o = 'NEEDS NOTE';
+                                        break;
+
+                                    case 'a Mild Allergic Reaction.':
+                                        o = 'NEEDS NOTE';
+                                        break;
+
+                                    case 'a Severe Allergic Reaction.':
+                                        o = 'NEEDS NOTE';
+                                        break;
+
+                                    case 'a Motor Vehicle Collision.':
+                                        o = 'NEEDS NOTE';
+                                        break;
+
+                                    case 'a Motor Vehicle Collision vs a Pedestriant (hit by a car).':
+                                        o = 'NEEDS NOTE';
+                                        break;
+
+                                    default:
+                                        o = '';
+                                }
+
+                                document.getElementById('orders').innerHTML = o;
                             }
 
                         </script>
