@@ -204,7 +204,7 @@
                         <!-- Presentation Script -->
                         <script>
                             function generate() {
-                                let x = "This is Alexander Noble M.D. dictating on " + document.forms["info"]["Name"].value + ", a " + document.forms["info"]["Age"].value + " year old " + document.forms["info"]["Sex"].value + " who arrived via " + document.forms["info"]["ArrivalMode"].value + ". The patient arrived with the chief complaint of " + document.forms["info"]["ChiefComplaint"].value + document.forms["info"]["PainLocation"].value + document.forms["info"]["Story"].value + " The patient rates their current pain as a " + document.forms["info"]["PainSeverity"].value + document.forms["info"]["PainQuality"].value + " pain, that " + document.forms["info"]["ModifyingFactors1"].value + document.forms["info"]["ModifyingFactors2"].value + " The patient states that there are no associated symptoms that began about the same time. Patient appears well developed and nourished. Patient appears in discomfort and in " + document.forms["info"]["Distress"].value;
+                                let x = "This is Alexander Noble M.D. dictating on " + document.forms["info"]["Name"].value + ", a " + document.forms["info"]["Age"].value + " year old " + document.forms["info"]["Sex"].value + " who arrived via " + document.forms["info"]["ArrivalMode"].value + ". The patient arrived with the chief complaint of " + document.forms["info"]["ChiefComplaint"].value + document.forms["info"]["PainLocation"].value + document.forms["info"]["Story"].value + " The patient rates their current pain as a " + document.forms["info"]["PainSeverity"].value + document.forms["info"]["PainQuality"].value + " pain, that " + document.forms["info"]["ModifyingFactors1"].value + document.forms["info"]["ModifyingFactors2"].value + " The patient states that there are no associated symptoms that began about the same time. Patient appears well developed and nourished. Patient appears in " + document.forms["info"]["Distress"].value;
                                 document.getElementById("presentation").innerHTML = x;
 
                                 let y = '';
@@ -222,10 +222,6 @@
                                         break;
 
                                     case 'a severe Head Injury.':
-                                        y = 'There was no loss of consciousness. Patient did feel dizzy. Patient complained of a headache. Patient was able to walk. Patient had some episodes of diplopia, felt that they might faint and was assisted to the ground and was transported via paramedic for further evaluation. Laboratory data shows a mildly elevated creatinine of 1.3. Urine is within normal. Urinalysis showing no signs of infection. Head CT has no significant intracranial pathology. No mass shift, bleed or fracture. A 12-lead, reviewed by myself, noting normal sinus rhythm, normal axis rates of 90. No significant ST-T wave changes. Administered Acetaminophen for pain. Return precautions are given. Patient to D/C home.';
-                                        break;
-
-                                    case 'a severe Head Injury':
                                         y = 'There was no loss of consciousness. Patient did feel dizzy. Patient complained of a headache. Patient was able to walk. Patient had some episodes of diplopia, felt that they might faint and was assisted to the ground and was transported via paramedic for further evaluation. Laboratory data shows a mildly elevated creatinine of 1.3. Urine is within normal. Urinalysis showing no signs of infection. Head CT has no significant intracranial pathology. No mass shift, bleed or fracture. A 12-lead, reviewed by myself, noting normal sinus rhythm, normal axis rates of 90. No significant ST-T wave changes. Administered Acetaminophen for pain. Return precautions are given. Patient to D/C home.';
                                         break;
 
@@ -298,6 +294,94 @@
                                 }
 
                                 document.getElementById('procedure').innerHTML = y;
+
+                                let Z = '';
+                                switch (document.getElementById("ChiefComplaint").value) {
+                                    case 'a Laceration.':
+                                        z = 'S51.81 Laceration without foreign body';
+                                        break;
+
+                                    case 'a Laceration With Foreign Body.':
+                                        z = 'S51.82 Laceration with foreign body';
+                                        break;
+
+                                    case 'a Head Injury.':
+                                        z = 'S09.90XA Unspecified injury of head, initial encounter';
+                                        break;
+
+                                    case 'a severe Head Injury.':
+                                        z = 'S06.0X9 Concussion with loss of consciousness of unspecified duration';
+                                        break;
+
+                                    case 'an Arm Injury.':
+                                        z = 'S49.80 Other specified injuries of shoulder and upper arm, unspecified arm';
+                                        break;
+
+                                    case 'a Leg Injury.':
+                                        z = 'S79.829A Other specified injuries of unspecified thigh, initial encounter';
+                                        break;
+
+                                    case 'a severe Arm Injury.':
+                                        z = 'S52.323A Displaced transverse fracture of shaft of unspecified radius, initial encounter for closed fracture';
+                                        break;
+
+                                    case 'a severe Leg Injury.':
+                                        z = 'S82.226 Nondisplaced transverse fracture of shaft of unspecified tibia';
+                                        break;
+
+                                    case 'a Gun Shot Wound.':
+                                        z = 'S21.94XA Puncture wound with foreign body of unspecified part of thorax, initial encounter';
+                                        break;
+
+                                    case 'a Puncture Wound.':
+                                        z = 'S21.94 Puncture wound with foreign body of unspecified part of thorax';
+                                        break;
+
+                                    case 'Chest Pain.':
+                                        z = 'Z03.89 Encounter for observation for other suspected diseases and conditions ruled out';
+                                        break;
+
+                                    case 'severe chest pain.':
+                                        z = 'I21.11 ST elevation (STEMI) myocardial infarction involving right coronary artery';
+                                        break;
+
+                                    case 'a Syncopal Episode.':
+                                        z = 'R55 Syncope and collapse';
+                                        break;
+
+                                    case 'a Burn.':
+                                        z = 'T22.019A Burn of unspecified degree of unspecified forearm, initial encounter';
+                                        break;
+
+                                    case 'Abdominal Pain.':
+                                        z = 'R10.84 Generalized abdominal pain';
+                                        break;
+
+                                    case 'male genital pain.':
+                                        z = 'NEEDS NOTE';
+                                        break;
+
+                                    case 'a Mild Allergic Reaction.':
+                                        z = 'NEEDS NOTE';
+                                        break;
+
+                                    case 'a Severe Allergic Reaction.':
+                                        z = 'T78.2XXA Anaphylactic shock, unspecified, initial encounter';
+                                        break;
+
+                                    case 'a Motor Vehicle Collision.':
+                                        z = 'X82.0 Intentional collision of motor vehicle with other motor vehicle';
+                                        break;
+
+                                    case 'a Motor Vehicle Collision vs a Pedestriant (hit by a car).':
+                                        z = 'V02.10 Pedestrian on foot injured in collision with two- or three-wheeled motor vehicle in traffic accident';
+                                        break;
+
+                                    default:
+                                        z = '';
+                                }
+
+                                document.getElementById('procedure').innerHTML = z;
                             }
 
                         </script>
