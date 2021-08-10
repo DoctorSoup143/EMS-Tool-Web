@@ -1,6 +1,6 @@
 body {
-    background: rgb(9,9,121);
-    background: linear-gradient(180deg, rgba(9,9,121,1) 32%, rgba(0,172,255,1) 100%);
+    background: rgb(9, 9, 121);
+    background: linear-gradient(180deg, rgba(9, 9, 121, 1) 32%, rgba(0, 172, 255, 1) 100%);
     margin: 0px;
     font-size: 14px;
     height: 100%;
@@ -191,7 +191,7 @@ No media query since this is the default in Bootstrap because it is "mobile firs
 }
 
 
-#input1 {
+.input1 {
     width: 100%;
     font-family: Teko !important;
     font-size: 20px;
@@ -207,14 +207,14 @@ No media query since this is the default in Bootstrap because it is "mobile firs
     opacity: 0.9;
 }
 
-#input1:hover {
+.input1:hover {
     border-color: #b71c1c;
     border-radius: 0px;
     transition: all .3s ease;
 }
 
 
-#input11 {
+.input11 {
     width: 100%;
     font-family: Teko !important;
     font-size: 20px;
@@ -231,7 +231,7 @@ No media query since this is the default in Bootstrap because it is "mobile firs
 }
 
 
-#input11:hover {
+.input11:hover {
 
     border-color: #b71c1c;
     border-radius: 0px;
@@ -239,7 +239,7 @@ No media query since this is the default in Bootstrap because it is "mobile firs
 }
 
 
-#input2 {
+.input2 {
     width: 100%;
     font-family: Teko !important;
     font-size: 20px;
@@ -257,13 +257,13 @@ No media query since this is the default in Bootstrap because it is "mobile firs
 }
 
 
-#input2:hover {
+.input2:hover {
     border-color: #b71c1c;
     border-radius: 0px;
     transition: all .3s ease;
 }
 
-#input3 {
+.input3 {
     width: 100%;
     font-family: Teko !important;
     font-size: 20px;
@@ -281,13 +281,13 @@ No media query since this is the default in Bootstrap because it is "mobile firs
 }
 
 
-#input3:hover {
+.input3:hover {
     border-color: #b71c1c;
     transition: all .3s ease;
 }
 
 
-#input4 {
+.input4 {
     font-family: Teko !important;
     width: 50%;
     margin-top: 0px;
@@ -307,7 +307,7 @@ No media query since this is the default in Bootstrap because it is "mobile firs
     opacity: 0.9;
 }
 
-#input4:hover {
+.input4:hover {
     transition: all .5s ease;
     background-color: #b71c1c;
 }

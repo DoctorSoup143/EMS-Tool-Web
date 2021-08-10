@@ -72,13 +72,13 @@
         <div class="row">
             <div class="col-12 col-md-6 offset-md-3">
                 <p class="title">Patient Demographics</p>
-                <form>
+                <form id="info">
                     <p class="title2">Patient Name:</p>
-                    <input id="input1" name="Name" placeholder="Patient Name" required>
+                    <input id="Name" class="input1" name="Name" placeholder="Patient Name" required>
                     <p class="title2">Patient Age:</p>
-                    <input id="input11" name="Age" placeholder="Patient Age" required>
+                    <input id="Age" class="input11" name="Age" placeholder="Patient Age" required>
                     <p class="title2">Patient Sex:</p>
-                    <select id="input2" name="Sex" required>
+                    <select id="Sex" class="input2" name="Sex" required>
                         <option value="" selected disabled hidden></option>
                         <option value="Male">Male</option>
                         <option value="Female">Female</option>
@@ -86,8 +86,7 @@
                     <br />
                     <br />
                     <p class="title">Patient Story</p>
-                    <textarea id="input3" name="Story" placeholder="The patient was..." required></textarea>
-                </form>
+                    <textarea id="Story" class="input3" name="Story" placeholder="The patient was..." required></textarea>
             </div>
         </div>
         <br />
@@ -99,92 +98,219 @@
         <div class="row">
             <div class="col-12 col-md-6 offset-md-3">
                 <p class="title">Visit Information</p>
-                <form>
-                    <p class="title2">Arrival Mode:</p>
-                    <select id="input2" name="Arrival Mode" required>
-                        <option value="" selected disabled hidden></option>
-                        <option value="Ambulance">Ambulance</option>
-                        <option value="Walk In">Walk In</option>
-                    </select>
-                    <p class="title2">Chief Complaint:</p>
-                    <select id="input2" name="Chief Complaint" required>
-                        <option value="" selected disabled hidden></option>
-                        <option value="Laceration">Laceration</option>
-                        <option value="Lac FB">Laceration With Foreign Body</option>
-                        <option value="Head Injury">Head Injury</option>
-                        <option value="Arm Injury">Arm Injury</option>
-                        <option value="Leg Injury">Leg Injury</option>
-                        <option value="GSW">Gun Shot Wound</option>
-                        <option value="Puncture">Puncture Wound (Any)</option>
-                        <option value="Chest Pain">Chest Pain</option>
-                        <option value="Syncope">Syncopal Episode</option>
-                        <option value="Burn">Burn (Any)</option>
-                        <option value="Abdominal Pain">Abdominal Pain</option>
-                        <option value="Pain Male">Pain (Male Genitalia)</option>
-                        <option value="Reaction Mild">Allergic Reaction (Mild)</option>
-                        <option value="Reaction Severe">Allergic Reaction (Severe)</option>
-                    </select>
-                    <p class="title2">Injury/Pain Location:</p>
-                    <select id="input2" name="Chief Complaint" required>
-                        <option value="" selected disabled hidden></option>
-                        <option value="Head">Head</option>
-                        <option value="Thorax Heart">Thorax (Upper Left Quadrant)</option>
-                        <option value="Thorax">Thorax</option>
-                        <option value="L Arm">Arm (Left)</option>
-                        <option value="R Arm">Arm (Right)</option>
-                        <option value="Abdomen">Abdomen</option>
-                        <option value="Groin">Groin</option>
-                        <option value="L Leg">Leg (Left)</option>
-                        <option value="R Leg">Leg (Right)</option>
-                    </select>
-                    <p class="title2">Pain Severity:</p>
-                    <select id="input2" name="Chief Complaint" required>
-                        <option value="" selected disabled hidden></option>
-                        <option value="1">1/10</option>
-                        <option value="2">2/10</option>
-                        <option value="3">3/10</option>
-                        <option value="4">4/10</option>
-                        <option value="5">5/10</option>
-                        <option value="6">6/10</option>
-                        <option value="7">7/10</option>
-                        <option value="8">8/10</option>
-                        <option value="9">9/10</option>
-                        <option value="10">10/10</option>
-                    </select>
-                    <p class="title2">Modifying Factors:</p>
-                    <select id="input2" name="Chief Complaint" required>
-                        <option value="" selected disabled hidden>Are There Modifying Factors?</option>
-                        <option value="Yes">Yes</option>
-                        <option value="No">No</option>
-                    </select>
-                    <input id="input11" name="Age" placeholder="Modifying Factors" required>
-                    <p class="title2">Pain Quality:</p>
-                    <select id="input2" name="Chief Complaint" required>
-                        <option value="" selected disabled hidden>Pain Quality</option>
-                        <option value="Sharp">Sharp</option>
-                        <option value="Dull">Dull</option>
-                        <option value="Throbbing">Throbbing</option>
-                        <option value="Stabbing">Stabbing</option>
-                        <option value="Burning">Burning</option>
-                        <option value="Numb">Numb-like</option>
-                    </select>
-                    <button id="input4" type="submit">Generate Report</button>
+                <p class="title2">Arrival Mode:</p>
+                <select id="ArrivalMode" class="input2" name="Arrival Mode" required>
+                    <option value="" selected disabled hidden></option>
+                    <option value="Ambulance">Ambulance</option>
+                    <option value="Walk In">Walk In</option>
+                </select>
+                <p class="title2">Chief Complaint:</p>
+                <select id="ChiefComplaint" class="input2" name="Chief Complaint" required>
+                    <option value="" selected disabled hidden></option>
+                    <option value="a Laceration.">Laceration</option>
+                    <option value="a Laceration With Foreign Body.">Laceration With Foreign Body</option>
+                    <option value="a Head Injury.">Head Injury</option>
+                    <option value="a severe Head Injury.">Concussion</option>
+                    <option value="an Arm Injury.">Contusion (Arm)</option>
+                    <option value="a Leg Injury.">Contusion (Leg)</option>
+                    <option value="a severe Arm Injury.">Fracture (Arm)</option>
+                    <option value="a severe Leg Injury.">Fracture (Leg)</option>
+                    <option value="a Gun Shot Wound.">Gun Shot Wound</option>
+                    <option value="a Puncture Wound.">Puncture Wound (Any)</option>
+                    <option value="Chest Pain.">Chest Pain</option>
+                    <option value="severe chest pain.">STEMI</option>
+                    <option value="a Syncopal Episode.">Syncopal Episode</option>
+                    <option value="a Burn.">Burn (Any)</option>
+                    <option value="Abdominal Pain.">Abdominal Pain</option>
+                    <option value="male genital pain.">Pain (Male Genitalia)</option>
+                    <option value="a Mild Allergic Reaction.">Allergic Reaction (Mild)</option>
+                    <option value="a Severe Allergic Reaction.">Allergic Reaction (Severe)</option>
+                    <option value="a Motor Vehicle Collision.">Motor Vehicle Collision</option>
+                    <option value="a Motor Vehicle Collision vs a Pedestriant (hit by a car).">MVC vs Pedestrian</option>
+                </select>
+                <p class="title2">Injury/Pain Location:</p>
+                <select id="PainLocation" class="input2" name="Pain Location" required>
+                    <option value="" selected disabled hidden></option>
+                    <option value=" located on the patient's Head. ">Head</option>
+                    <option value=" located in the Upper Left Quadrant of the Thorax. ">Thorax (Upper Left Quadrant)</option>
+                    <option value=" located in the patient's Thorax. ">Thorax</option>
+                    <option value=" located on their Left Arm .">Arm (Left)</option>
+                    <option value=" located on their Right Arm. ">Arm (Right)</option>
+                    <option value=" located in the patient's lower Abdomen. ">Abdomen</option>
+                    <option value=" located in the patient's Groin region. ">Groin</option>
+                    <option value=" located on the patient's L Leg. ">Leg (Left)</option>
+                    <option value=" located on the patient's R Leg. ">Leg (Right)</option>
+                    <option value="">N/A</option>
+                </select>
+                <p class="title2">Pain Severity:</p>
+                <select id="PainSeverity" class="input2" name="Pain Severity" required>
+                    <option value="" selected disabled hidden></option>
+                    <option value="1/10, ">1/10</option>
+                    <option value="2/10, ">2/10</option>
+                    <option value="3/10, ">3/10</option>
+                    <option value="4/10, ">4/10</option>
+                    <option value="5/10, ">5/10</option>
+                    <option value="6/10, ">6/10</option>
+                    <option value="7/10, ">7/10</option>
+                    <option value="8/10, ">8/10</option>
+                    <option value="9/10, ">9/10</option>
+                    <option value="10/10, ">10/10</option>
+                </select>
+                <p class="title2">Modifying Factors:</p>
+                <select id="ModifyingFactors1" class="input2" name="Modifying Factors1" required>
+                    <option value="" selected disabled hidden>Are There Modifying Factors?</option>
+                    <option value="has no modifying factors.">No</option>
+                    <option value="is worse with movement.">Worse With Movement</option>
+                    <option value="">Other</option>
+                </select>
+                <input id="ModifyingFactors2" class="input11" name="Modifying Factors2" placeholder="Modifying Factors">
+                <p class="title2">Pain Quality:</p>
+                <select id="PainQuality" class="input2" name="Pain Quality" required>
+                    <option value="" selected disabled hidden></option>
+                    <option value="Sharp">Sharp</option>
+                    <option value="Dull">Dull</option>
+                    <option value="Throbbing">Throbbing</option>
+                    <option value="Stabbing">Stabbing</option>
+                    <option value="Burning">Burning</option>
+                    <option value="Numb">Numb-like</option>
+                </select>
+                <p class="title2">Distress Level:</p>
+                <select id="Distress" class="input2" name="Distress Level" required>
+                    <option value="" selected disabled hidden></option>
+                    <option value="no discomfort and no distress.">No Distress</option>
+                    <option value="some discomfort and some distress.">Some Distress</option>
+                    <option value="moderate discomfort and moderate distress.">Moderate Distress</option>
+                    <option value="significant discomfort and in distress.">Significant Distress</option>
+                </select>
                 </form>
+                <button class="input4" onclick="generate()">Generate Report</button>
+                <br />
+                <br />
+                <br />
+                <br />
+
+                <!-- Generated Text -->
+                <div class="row">
+                    <div class="col-12">
+                        <p class="title">PATIENT PRESENTATION</p>
+                        <p id="presentation" style="font-size: 25px;"></p>
+                        <br />
+                        <br />
+                        <p class="title">PROCEDURE NOTE</p>
+                        <p id="procedure" style="font-size: 25px;"></p>
+
+
+
+                        <!-- Presentation Script -->
+                        <script>
+                            function generate() {
+                                let x = "This is Alexander Noble M.D. dictating on " + document.forms["info"]["Name"].value + ", a " + document.forms["info"]["Age"].value + " year old " + document.forms["info"]["Sex"].value + " who arrived via " + document.forms["info"]["ArrivalMode"].value + ". The patient arrived with the chief complaint of " + document.forms["info"]["ChiefComplaint"].value + document.forms["info"]["PainLocation"].value + document.forms["info"]["Story"].value + " The patient rates their current pain as a " + document.forms["info"]["PainSeverity"].value + document.forms["info"]["PainQuality"].value + " pain, that " + document.forms["info"]["ModifyingFactors1"].value + document.forms["info"]["ModifyingFactors2"].value + " The patient states that there are no associated symptoms that began about the same time. Patient appears well developed and nourished. Patient appears in discomfort and in " + document.forms["info"]["Distress"].value;
+                                document.getElementById("presentation").innerHTML = x;
+
+                                let y = '';
+                                switch (document.getElementById("ChiefComplaint").value) {
+                                    case 'a Laceration.':
+                                        y = 'The area was prepped and draped in the usual sterile fashion. Local anesthesia was achieved using Lidocaine 1% with epinephrine. The wound was copiously irrigated. # 3-0 Nylon interrupted sutures were placed. Estimated blood loss was less than 0.5 mL. A dressing was applied to the area and post-procedure care, was explained. Return precautions are given. The patient tolerated the procedure well without complications.';
+                                        break;
+
+                                    case 'a Laceration With Foreign Body.':
+                                        y = 'The area was prepped and draped in the usual sterile fashion. Local anesthesia was achieved using Lidocaine 1% with epinephrine. The stockinette was reflected and the area was cleansed with a wet and dry sponge. There was noted to be some remaining periwound erythema. Upon inspection of the wound, there was noted to be foreign filling substance deep within the wound. The entry site from the foreign body was extended proximally approximately about 0.5 cm. At this time, a foreign body was visualized and removed with a straight stat. The area was carefully inspected for any remaining piece of foreign body. The area was palpated and there was no more remaining foreign body noted. There was no purulent drainage expressed. Area was flushed with copious amounts of sterile saline. Pulse lavage was performed with 3 liters of plain sterile saline. Wound cultures were obtained. The wound was then again inspected for any remaining foreign body or purulent drainage. None was noticed. 6 3-0 Nylon interrupted sutures were placed. Estimated blood loss was less than 0.7 mL. A dressing was applied to the area and post-procedure care, was explained. Return precautions are given. The patient tolerated the procedure well without complications.';
+                                        break;
+
+                                    case 'a Head Injury.':
+                                        y = 'NEEDS NOTE';
+                                        break;
+
+                                    case 'a severe Head Injury.':
+                                        y = 'There was no loss of consciousness. Patient did feel dizzy. Patient complained of a headache. Patient was able to walk. Patient had some episodes of diplopia, felt that they might faint and was assisted to the ground and was transported via paramedic for further evaluation. Laboratory data shows a mildly elevated creatinine of 1.3. Urine is within normal. Urinalysis showing no signs of infection. Head CT has no significant intracranial pathology. No mass shift, bleed or fracture. A 12-lead, reviewed by myself, noting normal sinus rhythm, normal axis rates of 90. No significant ST-T wave changes. Administered Acetaminophen for pain. Return precautions are given. Patient to D/C home.';
+                                        break;
+
+                                    case 'a severe Head Injury':
+                                        y = 'There was no loss of consciousness. Patient did feel dizzy. Patient complained of a headache. Patient was able to walk. Patient had some episodes of diplopia, felt that they might faint and was assisted to the ground and was transported via paramedic for further evaluation. Laboratory data shows a mildly elevated creatinine of 1.3. Urine is within normal. Urinalysis showing no signs of infection. Head CT has no significant intracranial pathology. No mass shift, bleed or fracture. A 12-lead, reviewed by myself, noting normal sinus rhythm, normal axis rates of 90. No significant ST-T wave changes. Administered Acetaminophen for pain. Return precautions are given. Patient to D/C home.';
+                                        break;
+
+                                    case 'an Arm Injury.':
+                                        y = 'X-rays revealed no fractures and good alignment. Patient was administered Acetaminophen for pain. Return precautions are given. Patient to D/C home.';
+                                        break;
+
+                                    case 'a Leg Injury.':
+                                        y = 'X-rays revealed no fractures and good alignment. Patient was administered Acetaminophen for pain. Return precautions are given. Patient to D/C home.';
+                                        break;
+
+                                    case 'a severe Arm Injury.':
+                                        y = 'Patient was started on fluids, 0.9 normal saline at 100mL per hour. Conscious sedation was achieved via propofol via the emergency department staff. Afterwards, traction with re-creation of the injury pattern was utilized to achieve reduction of the patients fracture. This was confirmed with image intensifier. Subsequently, the patient was placed into a splint. The patient was aroused from conscious sedation and at this time it was noted that the patient had full sensation. Post-reduction x-rays revealed good alignment. The lateral x-rays also revealed adequate reduction. At this time, we will allow the patient to be discharged home.';
+                                        break;
+
+                                    case 'a severe Leg Injury.':
+                                        y = 'X-rays revealed multiple hairline fractures and good alignment. Patient was placed into a splint. Patient was administered Morphine for pain. Return precautions are given. Patient to D/C home.';
+                                        break;
+
+                                    case 'a Gun Shot Wound.':
+                                        y = 'The area was prepped and draped in the usual sterile fashion. Local anesthesia was achieved using Lidocaine 1% with epinephrine. The wound was copiously irrigated. Patient transported to operating room. An IV was instituted in the preoperative holding area. The patient was transported to the operating room and placed on the operating table in a supine position with a safety strap across the lap. General anesthesia was administered. The area was then prepped and draped in the usual sterile orthopedic fashion. The stockinette was reflected and the thorax was cleansed with a wet and dry sponge. There was noted to be some remaining periwound erythema. There was noted to be some mild crepitation about 2cm proximal from the entry wound. Upon inspection of the wound, there was noted to be hard foreign filling substance deep within the wound. The entry site from the foreign body was extended proximally about 0.5 cm. At this time, a large foreign body was visualized and removed with a straight stat. The area was carefully inspected for any remaining piece of foreign body. The area was palpated and there was no more remaining foreign body noted. There was no purulent drainage expressed. Area was flushed with copious amounts of sterile saline. Pulse lavage was performed with 3 liters of plain sterile saline. Wound cultures were obtained, aerobic and aerobic. The wound was then again inspected for any remaining foreign body or purulent drainage. None was noticed. The wound was packed with sterile new gauze, and dressings consisted of 4x4s, ABDs, Kling, and Kerlix. The patient tolerated the above procedure and anesthesia well without complications.';
+                                        break;
+
+                                    case 'a Puncture Wound.':
+                                        y = 'The area was prepped and draped in the usual sterile fashion. Local anesthesia was achieved using Lidocaine 1% with epinephrine. The wound was copiously irrigated. Patient transported to operating room. An IV was instituted in the preoperative holding area. The patient was transported to the operating room and placed on the operating table in a supine position with a safety strap across the lap. General anesthesia was administered. The area was then prepped and draped in the usual sterile orthopedic fashion. The stockinette was reflected and the thorax was cleansed with a wet and dry sponge. There was noted to be some remaining periwound erythema. There was noted to be some mild crepitation about 2cm proximal from the entry wound. Upon inspection of the wound, there was noted to no foreign body within the wound. The area was flushed with copious amounts of sterile saline. Pulse lavage was performed with 3 liters of plain sterile saline. Wound cultures were obtained. The wound was then again inspected for purulent drainage. None was noticed. The wound was packed with sterile new gauze, and dressings consisted of 4x4s, ABDs, Kling, and Kerlix. The patient tolerated the above procedure and anesthesia well without complications.';
+                                        break;
+
+                                    case 'Chest Pain.':
+                                        y = 'Patient was started on fluids, 0.9 normal saline at 100 mL per hour. Myoglobin, CK-MB mass, Trop. T, and Top. I all within normal limits. Chest x-ray appears normal. Electrocardiogram shows normal sinus rhythm with no acute ST or T-wave segment changes. There were no acute changes seen on the electrocardiogram. O2 saturation is 99%. Patient under observation until symptoms subside. The patient received 45 cc of Mylanta and 10 cc of viscous lidocaine with complete relief of his chest pain.';
+                                        break;
+
+                                    case 'severe chest pain.':
+                                        y = 'Patient was started on fluids, 0.9 normal saline at 100 mL per hour. Patient was administered an electrocardiogram within 5mins of the emergency department stay. Readings show symptoms of an ST segment elevation myocardial infarction. O2 saturation is at 97%. The patient was administered Aspirin for clot prevention and Nitroglycerin to reduce the patients pain. The patient was placed on continuous monitoring through the emergency department stay. After further evaluation, benazepril was administered to improve blood flow. The patients symptoms after their emergency department stay seem to be alleviating. The patient is to follow up with a cardiologist tomorrow morning. Patient to DC home.';
+                                        break;
+
+                                    case 'a Syncopal Episode.':
+                                        y = 'Patient was started on fluids, 0.9 normal saline at 100 mL per hour. CBC, minor chemistry, cardiac enzymes, E7, Troponin, and D-Dimer, all within normal limits. Chest x-ray, as read by me appeared normal. Electrocardiogram shows normal sinus rhythm with no acute ST or T-wave segment changes. Patient was monitored during their ED stay and awoke not long after arrival. No artificial pressers were required. Patient is cleared to D/C home.';
+                                        break;
+
+                                    case 'a Burn.':
+                                        y = 'An IV was instituted and the patient was started on fluids, 0.9 normal saline at 100ml per hour. The patient was applied standard burn lotion. The patient was administered morphine for pain and the patients pain is currently controlled by medication. The patient seems to be more comfortable after the administration of Morphine. The patients burns were wrapped with gauze and aftercare was explained. Return precautions were given and the patient is to DC home.';
+                                        break;
+
+                                    case 'Abdominal Pain.':
+                                        y = 'Patient was started on fluids, 0.9 normal saline at 100mL per hour. CBC, minor chemistry, Hepatic Function, Amylase and Lipase are all within normal limits. Abdominal CT appears normal. Electrocardiogram shows normal sinus rhythm with no acute ST or T-wave segment changes. Patient was administered Morphine for pain. Return precautions are given. Patient to D/C home.';
+                                        break;
+
+                                    case 'male genital pain.':
+                                        y = 'NEEDS NOTE';
+                                        break;
+
+                                    case 'a Mild Allergic Reaction.':
+                                        y = 'NEEDS NOTE';
+                                        break;
+
+                                    case 'a Severe Allergic Reaction.':
+                                        y = 'Upon arrival to the emergency department the patients airway was inspected and determined clear of any foreign body. The patient was however experiencing symptoms of anaphylactic shock. Epinephrine was administered within the first 10mins of the emergency department stay. Patient was administered diphenhydramine and ibuprofen to alleviate symptoms. After monitoring the patient their symptoms began to subside and they are cleared to discharge home with complications. A follow up to see an allergist has been scheduled.';
+                                        break;
+
+                                    case 'a Motor Vehicle Collision.':
+                                        y = 'The patient was removed from the backboard within the first half hour of the emergency department stay. The patient has no significant bony deformities or abnormalities. The patient was given a dose of Tylenol here in the emergency department for treatment of pain. The patients CT scans of the abdomen appeared normal. There are no signs of bleeding. I believe, there is just a contusion and abrasion to the abdomen from the seat belt, and likely from the airbag as well. The patients pain is controlled with Acetaminophen and they are feeling more comfortable. The patient is able to stand and walk through the emergency department without difficulty.';
+                                        break;
+
+                                    case 'a Motor Vehicle Collision vs a Pedestriant (hit by a car).':
+                                        y = 'The patient was removed from the backboard within the first half hour of the emergency department stay.  The patient was noted to have significant bony deformities and abnormalities. The patient was given a dose of Tylenol here in the emergency department for treatment of pain. The patients CT scans of the abdomen appeared normal. The patients X-Ray results for the thorax appear normal. The patients X-Ray results for the L-Arm, as read by me, show a significant fracture with poor alignment. Patient sustained bilateral contusions and lacerations on both arms and legs. I believe, the contusion and abrasion to the abdomen was from the seat belt, and likely from the airbag as well. The patients pain is controlled with medication and they are feeling slightly more comfortable. The patient is able to stand and walk through the emergency department without difficulty. After further inspection of the lacerations to the arms and legs, the area was prepped and draped in the usual sterile fashion. Local anesthesia was achieved using Lidocaine 1% with epinephrine. The wounds were copiously irrigated. A total of 11 3-0 Nylon interrupted sutures were placed throughout all lacerations. Estimated blood loss was less than 0.9 mL. A dressing was applied to the area and post-procedure care, for lacerations, was explained. Return precautions are given. The patient tolerated the procedure well without complications. Patient was started on fluids, 0.9 normal saline at 100mL per hour.';
+                                        break;
+
+                                    default:
+                                        y = '';
+                                }
+
+                                document.getElementById('procedure').innerHTML = y;
+                            }
+
+                        </script>
+                        <br />
+                        <br />
+                        <br />
+
+
+
+                    </div>
+                </div>
             </div>
         </div>
-
-
-
-
-
-
-        <!-- Particles Background 
-        <div id="particles-js"></div>
-        <script type="text/javascript" src="js/particles.js"></script>
-        <script type="text/javascript" src="js/app.js"></script>
-        <br>
-        <br>
--->
     </div>
 </body>
 
@@ -201,7 +327,7 @@
                 <a href="https://www.instagram.com/DoctorSoup143/" class="fab fa-instagram" target="_blank"></a>
             </div>
             <div class="legal">
-                <p>©Copyright DoctorSoup143 - 2020 | <a href="http://DoctorSoup143.tv/Privacy">Privacy Policy</a> | <a href="http://DoctorSoup143.tv/Contact">Contact</a></p>
+                <p>©Copyright DoctorSoup143 - 2021 <a href="http://DoctorSoup143.tv/Privacy">Privacy Policy</a> | <a href="http://DoctorSoup143.tv/Contact">Contact</a></p>
             </div>
         </div>
     </div>
