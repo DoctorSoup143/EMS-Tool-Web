@@ -68,6 +68,27 @@
         <br />
         <br />
 
+        <!-- Provider Information -->
+        <div class="row">
+            <div class="col-12 col-md-6 offset-md-3">
+                <p class="title">Provider Information</p>
+                <form id="info">
+                    <p class="title2">Provider Name:</p>
+                    <input id="pName" class="input1" name="Name" placeholder="First and Last Name" required>
+                    <p class="title2">Credentials:</p>
+                    <select id="Credentials" class="input2" name="Credentials" required>
+                        <option value="" selected disabled hidden></option>
+                        <option value="M.D.">M.D.</option>
+                        <option value="D.O.">D.O.</option>
+                        <option value="D.O.">A.R.N.P.</option>
+                    </select>
+                    <p class="title2">Provider NPI:</p>
+                    <input id="NPI" class="input11" name="Age" placeholder="1234567890" required>
+                    <br />
+                    <br />
+            </div>
+        </div>
+
         <!-- Demographics -->
         <div class="row">
             <div class="col-12 col-md-6 offset-md-3">
@@ -213,7 +234,8 @@
                         <!-- Presentation Script -->
                         <script>
                             function generate() {
-                                let x = "This is Alexander Noble M.D. dictating on " + document.forms["info"]["Name"].value + ", a " + document.forms["info"]["Age"].value + " year old " + document.forms["info"]["Sex"].value + " who arrived via " + document.forms["info"]["ArrivalMode"].value + ". The patient arrived with the chief complaint of " + document.forms["info"]["ChiefComplaint"].value + document.forms["info"]["PainLocation"].value + document.forms["info"]["Story"].value + " The patient rates their current pain as a " + document.forms["info"]["PainSeverity"].value + document.forms["info"]["PainQuality"].value + " pain, that " + document.forms["info"]["ModifyingFactors1"].value + document.forms["info"]["ModifyingFactors2"].value + " The patient states that there are no associated symptoms that began about the same time. Patient appears well developed and nourished. Patient appears in " + document.forms["info"]["Distress"].value;
+                                let x = "This is " + document.forms["info"]["pName"].value + " " + document.forms["info"]["Credentials"].value + " (" +
+                                    document.forms["info"]["NPI"].value + ") dictating on " + document.forms["info"]["Name"].value + ", a " + document.forms["info"]["Age"].value + " year old " + document.forms["info"]["Sex"].value + " who arrived via " + document.forms["info"]["ArrivalMode"].value + ". The patient arrived with the chief complaint of " + document.forms["info"]["ChiefComplaint"].value + document.forms["info"]["PainLocation"].value + document.forms["info"]["Story"].value + " The patient rates their current pain as a " + document.forms["info"]["PainSeverity"].value + document.forms["info"]["PainQuality"].value + " pain, that " + document.forms["info"]["ModifyingFactors1"].value + document.forms["info"]["ModifyingFactors2"].value + " The patient states that there are no associated symptoms that began about the same time. Patient appears well developed and nourished. Patient appears in " + document.forms["info"]["Distress"].value;
                                 document.getElementById("presentation").innerHTML = x;
 
                                 let y = '';
@@ -480,7 +502,6 @@
 
                                 document.getElementById('orders').innerHTML = o;
                             }
-
                         </script>
                         <br />
                         <br />
@@ -512,6 +533,4 @@
             </div>
         </div>
     </div>
-</footer>
-
-</html>
+</footer></html>
