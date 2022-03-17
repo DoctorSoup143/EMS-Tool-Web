@@ -169,9 +169,9 @@ No media query since this is the default in Bootstrap because it is "mobile firs
 
 
 
-/*////////////////////
-	Contact Form
-////////////////////*/
+/*/////////////////
+    Field Boxes
+/////////////////*/
 
 .title {
     font-size: 35px;
@@ -319,9 +319,11 @@ No media query since this is the default in Bootstrap because it is "mobile firs
 
 
 
-/*/////////////
+
+
+/*////////////
 	Footer
-/////////////*/
+////////////*/
 
 footer {
     position: relative;
