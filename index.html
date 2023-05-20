@@ -135,6 +135,7 @@
                 <p class="title2">Chief Complaint:</p>
                 <select id="ChiefComplaint" class="input2" name="Chief Complaint" required>
                     <option value="" selected disabled hidden></option>
+                    <option value="visual disturbances.">Visual Disturbances</option>
                     <option value="a Laceration,">Laceration</option>
                     <option value="a Laceration With Foreign Body,">Laceration With Foreign Body</option>
                     <option value="a Head Injury.">Head Injury</option>
@@ -248,6 +249,10 @@
 
                                     let y = '';
                                     switch (document.getElementById("ChiefComplaint").value) {
+                                        case 'visual disturbances.':
+                                            y = 'The patient was administed a standard visual exam after expressing concerns of an acute onset unspecified visual disturbances. Due to the nature of these disturbances, it is suspected to be bacterial. Subsequently, The patient was administered Cetrifaxone to attempt to eliminate all visual disturbances for potential bacteria infection.';
+                                            break;
+
                                         case 'a Laceration,':
                                             y = 'The area was prepped and draped in the usual sterile fashion. Local anesthesia was achieved using Lidocaine 1% with epinephrine. The wound was copiously irrigated. 6 3-0 Nylon interrupted sutures were placed. Estimated blood loss was less than 0.5 mL. A dressing was applied to the area and post-procedure care, was explained. Return precautions are given. The patient tolerated the procedure well without complications.';
                                             break;
@@ -340,88 +345,92 @@
 
                                     let Z = '';
                                     switch (document.getElementById("ChiefComplaint").value) {
+                                        case 'visual disturbances.':
+                                            z = 'H53.10 (Unspecified subjective visual disturbances)';
+                                            break;
+
                                         case 'a Laceration,':
-                                            z = '(S51.81) Laceration without foreign body';
+                                            z = 'S51.81 (Laceration without foreign body)';
                                             break;
 
                                         case 'a Laceration With Foreign Body,':
-                                            z = '(S51.82) Laceration with foreign body';
+                                            z = 'S51.82 (Laceration with foreign body)';
                                             break;
 
                                         case 'a Head Injury.':
-                                            z = '(S09.90XA) Unspecified injury of head, initial encounter';
+                                            z = 'S09.90XA (Unspecified injury of head, initial encounter)';
                                             break;
 
                                         case 'a severe Head Injury.':
-                                            z = '(S06.0X9) Concussion with loss of consciousness of unspecified duration';
+                                            z = 'S06.0X9 (Concussion with loss of consciousness of unspecified duration)';
                                             break;
 
                                         case 'an Arm Injury.':
-                                            z = '(S49.80) Other specified injuries of shoulder and upper arm, unspecified arm';
+                                            z = 'S49.80 (Other specified injuries of shoulder and upper arm, unspecified arm)';
                                             break;
 
                                         case 'a Leg Injury.':
-                                            z = '(S79.829A) Other specified injuries of unspecified thigh, initial encounter';
+                                            z = 'S79.829A (Other specified injuries of unspecified thigh, initial encounter)';
                                             break;
 
                                         case 'a severe Arm Injury.':
-                                            z = '(S52.323A) Displaced transverse fracture of shaft of unspecified radius, initial encounter for closed fracture';
+                                            z = 'S52.323A (Displaced transverse fracture of shaft of unspecified radius, initial encounter for closed fracture)';
                                             break;
 
                                         case 'a severe Leg Injury.':
-                                            z = '(S82.226) Nondisplaced transverse fracture of shaft of unspecified tibia';
+                                            z = 'S82.226 (Nondisplaced transverse fracture of shaft of unspecified tibia)';
                                             break;
 
                                         case 'a Gun Shot Wound,':
-                                            z = '(S21.94XA) Puncture wound with foreign body of unspecified part of thorax, initial encounter';
+                                            z = 'S21.94XA (Puncture wound with foreign body of unspecified part of thorax, initial encounter)';
                                             break;
 
                                         case 'a Puncture Wound,':
-                                            z = '(S21.94) Puncture wound with foreign body of unspecified part of thorax';
+                                            z = 'S21.94 (Puncture wound with foreign body of unspecified part of thorax)';
                                             break;
 
                                         case 'Chest Pain,':
-                                            z = '(Z03.89) Encounter for observation for other suspected diseases and conditions ruled out';
+                                            z = 'Z03.89 (Encounter for observation for other suspected diseases and conditions ruled out)';
                                             break;
 
                                         case 'severe chest pain,':
-                                            z = '(I21.11) ST elevation myocardial infarction involving right coronary artery (STEMI)';
+                                            z = 'I21.11 (ST elevation myocardial infarction involving right coronary artery (STEMI))';
                                             break;
 
                                         case 'a Syncopal Episode.':
-                                            z = '(R55) Syncope and collapse';
+                                            z = 'R55 (Syncope and collapse)';
                                             break;
 
                                         case 'a Burn,':
-                                            z = '(T22.019A) Burn of unspecified degree of unspecified forearm, initial encounter';
+                                            z = 'T22.019A (Burn of unspecified degree of unspecified forearm, initial encounter)';
                                             break;
 
                                         case 'Abdominal Pain.':
-                                            z = '(R10.84) Generalized abdominal pain';
+                                            z = 'R10.84 (Generalized abdominal pain)';
                                             break;
 
                                         case 'male genital pain.':
-                                            z = '(N50.8) Other specified disorders of male genital organs';
+                                            z = 'N50.8 (Other specified disorders of male genital organs)';
                                             break;
 
                                         case 'a Mild Allergic Reaction.':
-                                            z = '(T78.40) Allergy, unspecified';
+                                            z = 'T78.40 (Allergy, unspecified)';
                                             break;
 
                                         case 'a Severe Allergic Reaction.':
-                                            z = '(T78.2XXA)  Anaphylactic shock, unspecified, initial encounter';
+                                            z = 'T78.2XXA  (Anaphylactic shock, unspecified, initial encounter)';
                                             break;
 
                                         case 'a Motor Vehicle Collision.':
-                                            z = '(V49.69) Unspecified car occupant injured in collision with other motor vehicles in traffic accident';
+                                            z = 'V49.69 (Unspecified car occupant injured in collision with other motor vehicles in traffic accident)';
                                             break;
 
                                         case 'a significant Motor Vehicle Collision.':
-                                            z = '(V49.69) Unspecified car occupant injured in collision with other motor vehicles in traffic accident';
+                                            z = 'V49.69 (Unspecified car occupant injured in collision with other motor vehicles in traffic accident)';
                                             break;
 
                                         case 'a Motor Vehicle Collision vs a Pedestriant (hit by a car).':
-                                            z = '(V02.10) Pedestrian on foot injured in collision with two- or three-wheeled motor vehicle in traffic accident';
+                                            z = 'V02.10 (Pedestrian on foot injured in collision with two- or three-wheeled motor vehicle in traffic accident)';
                                             break;
 
                                         default:
@@ -432,6 +441,10 @@
 
                                     let o = '';
                                     switch (document.getElementById("ChiefComplaint").value) {
+                                        case 'visual disturbances.':
+                                            o = '- Cetrifaxone (Oral administration). <br/>- Standard visual exam.';
+                                            break;
+
                                         case 'a Laceration,':
                                             o = '- Lidocaine 1% With Epinephrine Injection <br/>- Simple Laceration Repair';
                                             break;
