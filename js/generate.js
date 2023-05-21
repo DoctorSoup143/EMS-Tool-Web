@@ -26,6 +26,14 @@ function generate() {
             y = 'The patient was administed a standard visual exam after expressing concerns of an acute onset unspecified visual disturbances. Due to the nature of these disturbances, it is suspected to be bacterial. Subsequently, The patient was administered Cetrifaxone to attempt to eliminate all visual disturbances for potential bacteria infection.';
             break;
 
+        case 'mild intoxication with increased imparement.':
+            y = 'The initial assessment revealed the patient to be disoriented, unsteady gait and slurred speech. Intravenous (IV) access was established for fluid resuscitation and medication administration. The patient received a bolus of normal saline based on their hemodynamic status and response to initial fluid administration. Following the management of alcohol intoxication, the patients vital signs stabilized, and their mental status improved.The patient remained under observation for a sufficient period, and repeat blood alcohol level testing was performed periodically to ensure a declining trend. The patient was counseled regarding the risks of alcohol misuse, the potential consequences of excessive drinking, and offered appropriate resources for rehabilitation and support. Patient to discharge home.';
+            break;
+
+        case 'severe intoxication with severe and life threatening imparement.':
+            y = 'The initial assessment revealed the patient to be disoriented, unsteady gait, slurred speech, and altered level of consciousness. Intravenous (IV) access was established for fluid resuscitation and medication administration. Supplemental oxygen was administered via nasal cannula to maintain adequate oxygenation. The patient received a bolus of normal saline based on their hemodynamic status and response to initial fluid administration. Thiamine 100 mg IV was administered to prevent or treat potential Wernicke-Korsakoff syndrome associated with alcohol use. Glucose 50% IV was administered to counteract hypoglycemia and prevent complications such as seizures. Lorazepam were administered as needed for management of alcohol withdrawal symptoms and to prevent progression to delirium tremens. Following the management of alcohol intoxication, the patients vital signs stabilized, and their mental status improved.The patient remained under observation for a sufficient period, and repeat blood alcohol level testing was performed periodically to ensure a declining trend. The patient was counseled regarding the risks of alcohol misuse, the potential consequences of excessive drinking, and offered appropriate resources for rehabilitation and support. Patient to discharge home.';
+            break;
+
         case 'a Laceration,':
             y = 'The area was prepped and draped in the usual sterile fashion. Local anesthesia was achieved using Lidocaine 1% with epinephrine. The wound was copiously irrigated. 6 3-0 Nylon interrupted sutures were placed. Estimated blood loss was less than 0.5 mL. A dressing was applied to the area and post-procedure care, was explained. Return precautions are given. The patient tolerated the procedure well without complications.';
             break;
@@ -120,6 +128,14 @@ function generate() {
     switch (document.getElementById("ChiefComplaint").value) {
         case 'visual disturbances.':
             z = 'H53.10 (Unspecified subjective visual disturbances)';
+            break;
+
+        case 'mild intoxication with increased imparement.':
+            z = 'F10.92 (Alcohol use, unspecified with intoxication)';
+            break;
+
+        case 'severe intoxication with severe and life threatening imparement.':
+            z = 'F10.92 (Alcohol use, unspecified with intoxication)';
             break;
 
         case 'a Laceration,':
@@ -218,6 +234,14 @@ function generate() {
     switch (document.getElementById("ChiefComplaint").value) {
         case 'visual disturbances.':
             o = '- Cetrifaxone (Oral administration). <br />- Standard visual exam.';
+            break;
+
+        case 'mild intoxication with increased imparement.':
+            o = '- BAC (Blood Alcohol Concentration) test <br />- Sodium Chloride 0.9% 1000ml KCl 100 ml/hr IV.';
+            break;
+
+        case 'severe intoxication with severe and life threatening imparement.':
+            o = '- BAC (Blood Alcohol Concentration) test <br />- Sodium Chloride 0.9% 1000ml KCl 100 ml/hr IV. <br />- Oxygen therapy <br />- Thiamine 100 mg IV <br />- Glucose 50% IV <br />- Lorazepam';
             break;
 
         case 'a Laceration,':
