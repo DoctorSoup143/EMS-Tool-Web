@@ -2,572 +2,77 @@
 <html lang="en">
 
 <head>
-    <!-- Boostrap -->
+
+    <!-- Prevent Cache HTML -->
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="-1">
+    <meta http-equiv="CACHE-CONTROL" content="NO-CACHE">
+
+
+    <!-- META TAGS -->
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
-    <!-- Remove Browser Cache -->
-    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
-    <meta http-equiv="Pragma" content="no-cache" />
-    <meta http-equiv="Expires" content="0" />
-    <!-- Page Properties -->
-    <title>EMS Diagnosis Tool</title>
-    <meta name="description" content="A GTA RP tool designed to make EMS diagnosis easier and more efficient.">
     <meta name="author" content="DoctorSoup143">
-    <meta property="og:image" content="media/logo.png" />
-    <link rel="icon" href="media/logo.ico" type="image/x-icon" />
-    <link rel="shortcut icon" href="media/logo.ico" type="image/x-icon" />
-    <!-- CSS Links -->
-    <link href="https://fonts.googleapis.com/css?family=Teko:300" rel="stylesheet">
-    <link rel="stylesheet" href="fonts/fontawesome-free-5.0.13-css/fontawesome-all.min.css">
-    <link rel="stylesheet" href="css/styles.css">
-    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-    <!-- JS Links -->
-    <script src="js/jquery-3.3.1.min.js"></script>
-    <!-- More Site Properties -->
-    <meta property="og:title" content="DoctorSoup143.tv" />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="http://DoctorSoup143.tv" />
-    <meta property="og:image" content="https://doctorsoup143.tv/media/logo.png" />
-    <meta property="og:description" content="A GTA RP tool designed to make EMS diagnosis easier and more efficient." />
-    <meta name="theme-color" content="#B71C1C">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+
+    <title>Healthcare Calc.</title>
+
+    <!-- General Tags -->
+    <meta property="og:image" content="">
+    <meta property="og:description" content="">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="EMS RP Dx Tool">
+    <meta property="og:url" content="">
+    <meta name="description" content="A custom tool for EMS RP. ">
+    <meta name="keywords" content="">
+
+    <!-- Twitter Tags -->
+    <meta name="twitter:image" content="">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="EMS RP Dx Tool">
+    <meta name="twitter:description" content="A minimalistic app that contains healthcare  calculators, an ICD-10 lookup tool, and a CPT code lookup tool.">
+    <meta name="twitter:site" content="@DoctorSoup143">
+
+    <!-- Embed Theme Color -->
+    <meta name="theme-color" content="#f4f7fa">
+
+    <!-- ///// STYLES ///// -->
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-print-css/css/bootstrap-print.min.css" media="print">
+    <!-- Main Stylesheet -->
+    <link href="css/app.css" rel="stylesheet">
+    <link href="EMS RP Tool.styles.css" rel="stylesheet" />
+    <!-- JS -->
+    <script src="js/generate.js"></script>
+    <!-- JSON Stuff-->
+    <link href="manifest.json" rel="manifest" />
+    <!-- Favicon and Apple Icons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="images/180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="images/192.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="images/96.png">
+
 </head>
 
 <body>
-    <!-- Nav Bar -->
-    <div class="navbar">
-        <nav>
-            <a href=""><img src="media/logo.png" width="50" height="50"></a>
-            <ul>
-                <li>
-                    <a href="" class="hover_link">New Record</a>
-                </li>
-                <li>
-                    <a href="" class="hover_link">About</a>
-                </li>
-                <li>
-                    <a href="https://doctorsoup143.tv/Contact" class="hover_link">Contact</a>
-                </li>
-            </ul>
-        </nav>
-    </div>
-    <br />
-    <br />
-    <br />
-    <br />
-
-    <!-- Name & Description -->
-    <div class="container-fluid">
-        <div class="text-div" align="center">
-            <p style=" font-size: 30px;">EMS Diagnosis Tool</p>
-        </div>
-        <br />
-        <br />
-        <br />
-
-        <!-- Provider Information -->
-        <div class="row">
-            <div class="col-12 col-md-6 offset-md-3">
-                <p class="title">Provider Information</p>
-                <form id="info">
-                    <p class="title2">Provider Name:</p>
-                    <input id="pName" class="input1" name="pName" placeholder="First and Last Name" required>
-                    <p class="title2">Credentials:</p>
-                    <select id="Credentials" class="input2" name="Credentials" required>
-                        <option value="" selected disabled hidden></option>
-                        <option value="M.D.">M.D.</option>
-                        <option value="D.O.">D.O.</option>
-                        <option value="D.O.">A.R.N.P.</option>
-                    </select>
-                    <p class="title2">Provider NPI:</p>
-                    <input id="NPI" class="input11" name="NPI" placeholder="1234567890" required>
-                    <br />
-                    <br />
-            </div>
-        </div>
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-
-        <!-- Demographics -->
-        <div class="row">
-            <div class="col-12 col-md-6 offset-md-3">
-                <p class="title">Patient Demographics</p>
-                <form id="info">
-                    <p class="title2">Patient Name:</p>
-                    <input id="Name" class="input1" name="Name" placeholder="Patient Name" required>
-                    <p class="title2">Patient Age:</p>
-                    <input id="Age" class="input11" name="Age" placeholder="Patient Age" required>
-                    <p class="title2">Patient Sex:</p>
-                    <select id="Sex" class="input2" name="Sex" required>
-                        <option value="" selected disabled hidden></option>
-                        <option value="Male">Male</option>
-                        <option value="Female">Female</option>
-                    </select>
-                    <br />
-                    <br />
-                    <p class="title">Patient Story</p>
-                    <textarea id="Story" class="input3" name="Story" placeholder="The patient was..." required></textarea>
-            </div>
-        </div>
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-
-        <!-- Visit Information -->
-        <div class="row">
-            <div class="col-12 col-md-6 offset-md-3">
-                <p class="title">Visit Information</p>
-                <p class="title2">Arrival Mode:</p>
-                <select id="ArrivalMode" class="input2" name="Arrival Mode" required>
-                    <option value="" selected disabled hidden></option>
-                    <option value="Ambulance">Ambulance</option>
-                    <option value="Walk In">Walk In</option>
-                    <option value="Walk In">Police</option>
-                </select>
-                <p class="title2">Chief Complaint:</p>
-                <select id="ChiefComplaint" class="input2" name="Chief Complaint" required>
-                    <option value="" selected disabled hidden></option>
-                    <option value="visual disturbances.">Visual Disturbances</option>
-                    <option value="a Laceration,">Laceration</option>
-                    <option value="a Laceration With Foreign Body,">Laceration With Foreign Body</option>
-                    <option value="a Head Injury.">Head Injury</option>
-                    <option value="a severe Head Injury.">Concussion</option>
-                    <option value="an Arm Injury.">Arm Injury (Minor)</option>
-                    <option value="a Leg Injury.">Leg Injury (Minor)</option>
-                    <option value="a severe Arm Injury.">Arm Injury (Severe)</option>
-                    <option value="a severe Leg Injury.">Leg Injury (Severe)</option>
-                    <option value="a Gun Shot Wound,">Gun Shot Wound</option>
-                    <option value="a Puncture Wound,">Puncture Wound (Any)</option>
-                    <option value="Chest Pain,">Chest Pain (Moderate)</option>
-                    <option value="severe chest pain,">Chest Pain (Severe)</option>
-                    <option value="a Syncopal Episode.">Syncopal Episode</option>
-                    <option value="a Burn,">Burn (Any)</option>
-                    <option value="Abdominal Pain.">Abdominal Pain</option>
-                    <option value="male genital pain.">Pain (Male Genitalia)</option>
-                    <option value="a Mild Allergic Reaction.">Allergic Reaction (Mild)</option>
-                    <option value="a Severe Allergic Reaction.">Allergic Reaction (Severe)</option>
-                    <option value="a Motor Vehicle Collision.">Motor Vehicle Collision</option>
-                    <option value="a significant Motor Vehicle Collision.">Motor Vehicle Collision (Severe)</option>
-                    <option value="a Motor Vehicle Collision vs a Pedestriant (hit by a car).">MVC vs Pedestrian</option>
-                </select>
-                <p class="title2">Injury/Pain Location:</p>
-                <select id="PainLocation" class="input2" name="Pain Location" required>
-                    <option value="" selected disabled hidden></option>
-                    <option value=" located on the patient's Head. ">Head</option>
-                    <option value=" located in the Upper Left Quadrant of the Thorax. ">Thorax (Upper Left Quadrant)</option>
-                    <option value=" located in the patient's Thorax. ">Thorax</option>
-                    <option value=" located on their Left Arm .">Arm (Left)</option>
-                    <option value=" located on their Right Arm. ">Arm (Right)</option>
-                    <option value=" located in the patient's lower Abdomen. ">Abdomen</option>
-                    <option value=" located in the patient's Groin region. ">Groin</option>
-                    <option value=" located on the patient's L Leg. ">Leg (Left)</option>
-                    <option value=" located on the patient's R Leg. ">Leg (Right)</option>
-                    <option value="">N/A</option>
-                </select>
-                <p class="title2">Pain Severity:</p>
-                <select id="PainSeverity" class="input2" name="Pain Severity" required>
-                    <option value="" selected disabled hidden></option>
-                    <option value="1/10, ">1/10</option>
-                    <option value="2/10, ">2/10</option>
-                    <option value="3/10, ">3/10</option>
-                    <option value="4/10, ">4/10</option>
-                    <option value="5/10, ">5/10</option>
-                    <option value="6/10, ">6/10</option>
-                    <option value="7/10, ">7/10</option>
-                    <option value="8/10, ">8/10</option>
-                    <option value="9/10, ">9/10</option>
-                    <option value="10/10, ">10/10</option>
-                </select>
-                <p class="title2">Modifying Factors:</p>
-                <select id="ModifyingFactors1" class="input2" name="Modifying Factors1" required>
-                    <option value="" selected disabled hidden>Are There Modifying Factors?</option>
-                    <option value="has no modifying factors.">No</option>
-                    <option value="is worse with movement.">Worse With Movement</option>
-                    <option value="">Other</option>
-                </select>
-                <input id="ModifyingFactors2" class="input11" name="Modifying Factors2" placeholder="Modifying Factors">
-                <p class="title2">Pain Quality:</p>
-                <select id="PainQuality" class="input2" name="Pain Quality" required>
-                    <option value="" selected disabled hidden></option>
-                    <option value="Sharp">Sharp</option>
-                    <option value="Dull">Dull</option>
-                    <option value="Throbbing">Throbbing</option>
-                    <option value="Stabbing">Stabbing</option>
-                    <option value="Burning">Burning</option>
-                    <option value="Numb">Numb-like</option>
-                </select>
-                <p class="title2">Distress Level:</p>
-                <select id="Distress" class="input2" name="Distress Level" required>
-                    <option value="" selected disabled hidden></option>
-                    <option value="no discomfort and no distress.">No Distress</option>
-                    <option value="some discomfort and some distress.">Some Distress</option>
-                    <option value="moderate discomfort and moderate distress.">Moderate Distress</option>
-                    <option value="significant discomfort and in distress.">Significant Distress</option>
-                </select>
-                </form>
-                <button class="input4" onclick="generate()">Generate Report</button>
-                <br />
-                <br />
-                <br />
-                <br />
-
-                <!-- Generated Text -->
-                <div class="row">
-                    <div class="col-12">
-                        <div id="scrollbox">
-                            <p class="title">PATIENT PRESENTATION</p>
-                            <p id="presentation" style="font-size: 25px;"></p>
-                            <br />
-                            <br />
-                            <p class="title">DIAGNOSIS</p>
-                            <p id="diagnosis" style="font-size: 25px; text-align: center;"></p>
-                            <br />
-                            <br />
-                            <p class="title">DOCTORS ORDERS</p>
-                            <p id="orders" style="font-size: 25px;"></p>
-                            <br />
-                            <br />
-                            <p class="title">PROCEDURE NOTE</p>
-                            <p id="procedure" style="font-size: 25px;"></p>
-
-
-
-                            <!-- Presentation Script -->
-                            <script>
-                                function generate() {
-                                    let x = "This is " + document.forms["info"]["pName"].value + " " + document.forms["info"]["Credentials"].value + " (" +
-                                        document.forms["info"]["NPI"].value + ") dictating on " + document.forms["info"]["Name"].value + ", a " + document.forms["info"]["Age"].value + " year old " + document.forms["info"]["Sex"].value + " who arrived via " + document.forms["info"]["ArrivalMode"].value + ". The patient arrived with the chief complaint of " + document.forms["info"]["ChiefComplaint"].value + document.forms["info"]["PainLocation"].value + document.forms["info"]["Story"].value + " The patient rates their current pain as a " + document.forms["info"]["PainSeverity"].value + document.forms["info"]["PainQuality"].value + " pain, that " + document.forms["info"]["ModifyingFactors1"].value + document.forms["info"]["ModifyingFactors2"].value + " The patient states that there are no associated symptoms that began about the same time. Patient appears well developed and nourished. Patient appears in " + document.forms["info"]["Distress"].value;
-                                    document.getElementById("presentation").innerHTML = x;
-
-                                    let y = '';
-                                    switch (document.getElementById("ChiefComplaint").value) {
-                                        case 'visual disturbances.':
-                                            y = 'The patient was administed a standard visual exam after expressing concerns of an acute onset unspecified visual disturbances. Due to the nature of these disturbances, it is suspected to be bacterial. Subsequently, The patient was administered Cetrifaxone to attempt to eliminate all visual disturbances for potential bacteria infection.';
-                                            break;
-
-                                        case 'a Laceration,':
-                                            y = 'The area was prepped and draped in the usual sterile fashion. Local anesthesia was achieved using Lidocaine 1% with epinephrine. The wound was copiously irrigated. 6 3-0 Nylon interrupted sutures were placed. Estimated blood loss was less than 0.5 mL. A dressing was applied to the area and post-procedure care, was explained. Return precautions are given. The patient tolerated the procedure well without complications.';
-                                            break;
-
-                                        case 'a Laceration With Foreign Body,':
-                                            y = 'The area was prepped and draped in the usual sterile fashion. Local anesthesia was achieved using Lidocaine 1% with epinephrine. The stockinette was reflected and the area was cleansed with a wet and dry sponge. There was noted to be some remaining periwound erythema. Upon inspection of the wound, there was noted to be foreign filling substance deep within the wound. The entry site from the foreign body was extended proximally approximately about 0.5 cm. At this time, a foreign body was visualized and removed with a straight stat. The area was carefully inspected for any remaining piece of foreign body. The area was palpated and there was no more remaining foreign body noted. There was no purulent drainage expressed. Area was flushed with copious amounts of sterile saline. Pulse lavage was performed with 3 liters of plain sterile saline. Wound cultures were obtained. The wound was then again inspected for any remaining foreign body or purulent drainage. None was noticed. 6 3-0 Nylon interrupted sutures were placed. Estimated blood loss was less than 0.7 mL. A dressing was applied to the area and post-procedure care, was explained. Return precautions are given. The patient tolerated the procedure well without complications.';
-                                            break;
-
-                                        case 'a Head Injury.':
-                                            y = 'There was no loss of consciousness. Patient was able to walk without assistance throughout the emergency department. Laboratory data shows elevated creatinine of 1.3. Urine is within normal. Urinalysis showing no signs of infection. Head CT has no significant intracranial pathology. No mass shift, bleed or fracture. A 12-lead, reviewed by myself, noting normal sinus rhythm, normal axis rates of 90. No significant ST-T wave changes. Administered Acetaminophen for pain. Return precautions are given. Patient to D/C home.';
-                                            break;
-
-                                        case 'a severe Head Injury.':
-                                            y = 'Patient experienced episodes of diplopia and a syncopal episode. Patient was not able to walk without assistance throughout the emergency department. Laboratory data shows elevated creatinine of 1.35. Urine is within normal ranges. Urinalysis showing no signs of infection. Head CT has no significant intracranial pathology. No mass shift, bleed or fracture. A 12-lead notes normal sinus rhythm, normal axis rates of 90. No significant ST-T wave changes. Attending adminstered Zofran for nausea relief and Ibuprofen to combat inflammation. A mental status exam was conducted and patient appears oriented in all 3 spheres. Return precautions are given. Patient to D/C home.';
-                                            break;
-
-                                        case 'an Arm Injury.':
-                                            y = 'X-rays revealed no fractures and good alignment. Patient was administered Acetaminophen for pain. Return precautions are given. Patient to D/C home without complications.';
-                                            break;
-
-                                        case 'a Leg Injury.':
-                                            y = 'X-rays revealed no fractures and good alignment. Patient was administered Acetaminophen for pain. Return precautions are given. Patient to D/C home without complications.';
-                                            break;
-
-                                        case 'a severe Arm Injury.':
-                                            y = 'X-rays revealed a fracture with poor alignment. Patient was administered Morphine for pain. Patient was started on fluids, 0.9 normal saline at 100mL per hour. Conscious sedation was achieved via propofol administered by the emergency department staff. Afterwards, traction with re-creation of the injury pattern was utilized to achieve reduction of the patients fracture. This was confirmed with an image intensifier. Subsequently, the patient was placed into a splint. The patient was aroused from conscious sedation and at this time and it was noted that the patient had full sensation. Post-reduction x-rays revealed good alignment. The lateral x-rays also revealed an adequate reduction. The patients pain is managed with medication, and at this time, we will allow the patient to be discharged home.';
-                                            break;
-
-                                        case 'a severe Leg Injury.':
-                                            y = 'X-rays revealed multiple hairline fractures and good alignment. The patient was administered Morphine for pain and placed into a splint. Return precautions are given. Follow up care has been coordinated. Patient to D/C home without complications.';
-                                            break;
-
-                                        case 'a Gun Shot Wound,':
-                                            y = 'The area was prepped and draped in the usual sterile fashion. Local anesthesia was achieved using Lidocaine 1% with epinephrine. The wound was copiously irrigated. Patient transported to operating room. An IV was instituted in the preoperative holding area. The patient was transported to the operating room and placed on the operating table in a supine position with a safety strap across the lap. General anesthesia was administered. The area was then prepped and draped in the usual sterile orthopedic fashion. The stockinette was reflected and the thorax was cleansed with a wet and dry sponge. There was noted to be some remaining periwound erythema. There was noted to be some mild crepitation about 2cm proximal from the entry wound. Upon inspection of the wound, there was noted to be hard foreign filling substance deep within the wound. The entry site from the foreign body was extended proximally about 0.5 cm. At this time, a large foreign body was visualized and removed with a straight stat. The area was carefully inspected for any remaining piece of foreign body. The area was palpated and there was no more remaining foreign body noted. There was no purulent drainage expressed. Area was flushed with copious amounts of sterile saline. Pulse lavage was performed with 3 liters of plain sterile saline. Wound cultures were obtained, aerobic and aerobic. The wound was then again inspected for any remaining foreign body or purulent drainage. None was noticed at this time. The wound was packed with sterile new gauze, and dressings consisted of 4x4s, ABDs, Kling, and Kerlix. The patient tolerated the above procedure and anesthesia well without complications. Patient is to D/C home after observation. Return precautions were given.';
-                                            break;
-
-                                        case 'a Puncture Wound,':
-                                            y = 'The area was prepped and draped in the usual sterile fashion. Local anesthesia was achieved using Lidocaine 1% with epinephrine. The wound was copiously irrigated. Patient transported to operating room. An IV was instituted in the preoperative holding area. The patient was transported to the operating room and placed on the operating table in a supine position with a safety strap across the lap. General anesthesia was administered. The area was then prepped and draped in the usual sterile orthopedic fashion. The stockinette was reflected and the thorax was cleansed with a wet and dry sponge. There was noted to be some remaining periwound erythema. There was noted to be some mild crepitation about 2cm proximal from the entry wound. Upon inspection of the wound, there was noted to be no foreign body within the wound. The area was flushed with copious amounts of sterile saline. Pulse lavage was performed with 3 liters of plain sterile saline and wound cultures were obtained. The wound was then again inspected for purulent drainage or any foreign body. None was noticed. The wound was packed with sterile new gauze, and dressings consisted of 4x4s, ABDs, Kling, and Kerlix. The patient tolerated the above procedure and anesthesia well without complications.';
-                                            break;
-
-                                        case 'Chest Pain,':
-                                            y = 'Patient was started on fluids, 0.9 normal saline at 100 mL per hour. Myoglobin, CK-MB mass, Trop. T, and Top. I all within normal limits. Chest x-ray appears normal. Electrocardiogram shows normal sinus rhythm with no acute ST or T-wave segment changes. There were no acute changes seen on the electrocardiogram. O2 saturation is 99%. Patient under observation until symptoms subside. The patient received Nitroglycerin. The patients pain is managed with medication.The patient states there is complete relief of his chest pain. Return precautions are given. Patient is to DC home after observation. Return precautions were given.';
-                                            break;
-
-                                        case 'severe chest pain,':
-                                            y = 'Patient was started on fluids, 0.9 normal saline at 100 mL per hour. Patient was administered an electrocardiogram within 5mins of the emergency department stay. Readings show symptoms of an ST segment elevation myocardial infarction. O2 saturation is at 97%. The patient was administered Aspirin and Nitroglycerin. The patient was placed on continuous monitoring through their emergency department stay. After further evaluation, Benazepril was administered. The patients symptoms during their emergency department stay appear to be alleviating. The patient is to follow up with a cardiologist tomorrow morning. Patient to DC home without complications. Return precautions were given.';
-                                            break;
-
-                                        case 'a Syncopal Episode.':
-                                            y = 'Patient was started on fluids, 0.9 normal saline at 100 mL per hour. CBC, minor chemistry, cardiac enzymes, E7, Troponin, and D-Dimer, all within normal limits. Head CT appears normal. Electrocardiogram shows normal sinus rhythm with no acute ST or T-wave segment changes. Patient was monitored during their ED stay and awoke not long after arrival. No artificial pressers were required. Patient is cleared to D/C home.';
-                                            break;
-
-                                        case 'a Burn,':
-                                            y = 'An IV was instituted and the patient was started on fluids, 0.9 normal saline at 100ml per hour. The patient was applied standard burn lotion. The patient was administered morphine for pain and the patients pain is currently controlled by medication. The patient seems to be more comfortable after the administration of the topical medication. The patients burns were wrapped with gauze and aftercare was explained. Return precautions were given and the patient is to DC home.';
-                                            break;
-
-                                        case 'Abdominal Pain.':
-                                            y = 'Patient was started on fluids, 0.9 normal saline at 100mL per hour. CBC, minor chemistry, Hepatic Function, Amylase and Lipase are all within normal limits. Abdominal CT appears normal. Electrocardiogram shows normal sinus rhythm with no acute ST or T-wave segment changes. Patient was administered Morphine for pain. Return precautions are given. Patient to D/C home.';
-                                            break;
-
-                                        case 'male genital pain.':
-                                            y = 'NEEDS NOTE';
-                                            break;
-
-                                        case 'a Mild Allergic Reaction.':
-                                            y = 'Upon arrival to the emergency department the patients airway was inspected and determined clear of any foreign body. The patient was however experiencing symptoms of an unspecified allergic reaction. Epinephrine was administered within the first 10mins of the emergency department stay. Patient was administered diphenhydramine and ibuprofen to alleviate symptoms. After monitoring the patient their symptoms began to subside and they are cleared to discharge home with complications. A follow up to see an allergist has been scheduled.';
-                                            break;
-
-                                        case 'a Severe Allergic Reaction.':
-                                            y = 'Upon arrival to the emergency department the patients airway was inspected and determined clear of any foreign body. The patient was however experiencing symptoms of anaphylactic shock. Epinephrine was administered within the first 10mins of the emergency department stay. Patient was administered diphenhydramine and ibuprofen to alleviate symptoms. After monitoring the patient their symptoms began to subside and they are cleared to discharge home with complications. A follow up to see an allergist has been scheduled.';
-                                            break;
-
-                                        case 'a Motor Vehicle Collision.':
-                                            y = 'The patient was removed from the backboard within the first half hour of the emergency department stay. The patient has no significant bony deformities or abnormalities. The patient was given a dose of Tylenol here in the emergency department for treatment of pain. The patients CT scans of the abdomen appeared normal. There are no signs of bleeding. I believe, there is just a contusion and abrasion to the abdomen from the seat belt, and likely from the airbag as well. The patients pain is controlled and they are feeling more comfortable. The patient is able to stand and walk through the emergency department without difficulty.';
-                                            break;
-
-                                        case 'a significant Motor Vehicle Collision.':
-                                            y = 'The patient was removed from the backboard within the first half hour of the emergency department stay. The patient has significant bony deformities and abnormalities. The patient was given a dose of Morphine here in the emergency department for treatment of pain. CT scans of the abdomen showed no abnormalities. X-ray results for the thorax were also normal. However, upon my review, the patients X-ray results for the left arm revealed a significant fracture with poor alignment. The patient also suffered bilateral contusions and lacerations on all extremities. After a thorough examination of the lacerations on the arms and legs, the affected areas were prepped and draped following standard sterile protocols. Local anesthesia was achieved using Lidocaine 1% with epinephrine. The wounds were then thoroughly irrigated. To close the lacerations, a total of 11 interrupted sutures made of 3-0 Nylon were placed. Estimated blood loss was minimal, less than 0.9 mL. X-rays revealed a fracture with poor alignment. Patient was administered Morphine for pain. Patient was started on fluids, 0.9 normal saline at 100mL per hour. Conscious sedation was achieved via propofol administered by the emergency department staff. Afterwards, traction with re-creation of the injury pattern was utilized to achieve reduction of the patients fracture. This was confirmed with an image intensifier. Subsequently, the patient was placed into a splint. The patient was aroused from conscious sedation and at this time and it was noted that the patient had full sensation. Post-reduction x-rays revealed good alignment. The lateral x-rays also revealed an adequate reduction. A dressing was applied to the treated areas, and post-procedure care instructions were provided to the patient. The patient is to be discharged home and follow up with a physical therapist 3 times a week.';
-                                            break;
-
-                                        case 'a Motor Vehicle Collision vs a Pedestriant (hit by a car).':
-                                            y = 'The patient was brought to the emergency department (ED) after being hit by a car. Within the first half hour of their ED stay, the patient was safely removed from the backboard. Upon examination, significant bony deformities and abnormalities were observed. To address the patients pain, a dose of Morphine was administered during their stay in the ED. CT scans of the abdomen showed no abnormalities. X-ray results for the thorax were also normal. However, upon my review, the patients X-ray results for the left arm revealed a significant fracture with poor alignment. The patient also suffered bilateral contusions and lacerations on all extremities. After a thorough examination of the lacerations on the arms and legs, the affected areas were prepped and draped following standard sterile protocols. Local anesthesia was achieved using Lidocaine 1% with epinephrine. The wounds were then thoroughly irrigated. To close the lacerations, a total of 11 interrupted sutures made of 3-0 Nylon were placed. Estimated blood loss was minimal, less than 0.9 mL. X-rays revealed a fracture with poor alignment. Patient was administered Morphine for pain. Patient was started on fluids, 0.9 normal saline at 100mL per hour. Conscious sedation was achieved via propofol administered by the emergency department staff. Afterwards, traction with re-creation of the injury pattern was utilized to achieve reduction of the patients fracture. This was confirmed with an image intensifier. Subsequently, the patient was placed into a splint. The patient was aroused from conscious sedation and at this time and it was noted that the patient had full sensation. Post-reduction x-rays revealed good alignment. The lateral x-rays also revealed an adequate reduction. A dressing was applied to the treated areas, and post-procedure care instructions were provided to the patient. The patient is to be discharged home and follow up with a physical therapist 3 times a week.';
-                                            break;
-
-                                        default:
-                                            y = '';
-                                    }
-
-                                    document.getElementById('procedure').innerHTML = y;
-
-                                    let Z = '';
-                                    switch (document.getElementById("ChiefComplaint").value) {
-                                        case 'visual disturbances.':
-                                            z = 'H53.10 (Unspecified subjective visual disturbances)';
-                                            break;
-
-                                        case 'a Laceration,':
-                                            z = 'S51.81 (Laceration without foreign body)';
-                                            break;
-
-                                        case 'a Laceration With Foreign Body,':
-                                            z = 'S51.82 (Laceration with foreign body)';
-                                            break;
-
-                                        case 'a Head Injury.':
-                                            z = 'S09.90XA (Unspecified injury of head, initial encounter)';
-                                            break;
-
-                                        case 'a severe Head Injury.':
-                                            z = 'S06.0X9 (Concussion with loss of consciousness of unspecified duration)';
-                                            break;
-
-                                        case 'an Arm Injury.':
-                                            z = 'S49.80 (Other specified injuries of shoulder and upper arm, unspecified arm)';
-                                            break;
-
-                                        case 'a Leg Injury.':
-                                            z = 'S79.829A (Other specified injuries of unspecified thigh, initial encounter)';
-                                            break;
-
-                                        case 'a severe Arm Injury.':
-                                            z = 'S52.323A (Displaced transverse fracture of shaft of unspecified radius, initial encounter for closed fracture)';
-                                            break;
-
-                                        case 'a severe Leg Injury.':
-                                            z = 'S82.226 (Nondisplaced transverse fracture of shaft of unspecified tibia)';
-                                            break;
-
-                                        case 'a Gun Shot Wound,':
-                                            z = 'S21.94XA (Puncture wound with foreign body of unspecified part of thorax, initial encounter)';
-                                            break;
-
-                                        case 'a Puncture Wound,':
-                                            z = 'S21.94 (Puncture wound with foreign body of unspecified part of thorax)';
-                                            break;
-
-                                        case 'Chest Pain,':
-                                            z = 'Z03.89 (Encounter for observation for other suspected diseases and conditions ruled out)';
-                                            break;
-
-                                        case 'severe chest pain,':
-                                            z = 'I21.11 (ST elevation myocardial infarction involving right coronary artery (STEMI))';
-                                            break;
-
-                                        case 'a Syncopal Episode.':
-                                            z = 'R55 (Syncope and collapse)';
-                                            break;
-
-                                        case 'a Burn,':
-                                            z = 'T22.019A (Burn of unspecified degree of unspecified forearm, initial encounter)';
-                                            break;
-
-                                        case 'Abdominal Pain.':
-                                            z = 'R10.84 (Generalized abdominal pain)';
-                                            break;
-
-                                        case 'male genital pain.':
-                                            z = 'N50.8 (Other specified disorders of male genital organs)';
-                                            break;
-
-                                        case 'a Mild Allergic Reaction.':
-                                            z = 'T78.40 (Allergy, unspecified)';
-                                            break;
-
-                                        case 'a Severe Allergic Reaction.':
-                                            z = 'T78.2XXA  (Anaphylactic shock, unspecified, initial encounter)';
-                                            break;
-
-                                        case 'a Motor Vehicle Collision.':
-                                            z = 'V49.69 (Unspecified car occupant injured in collision with other motor vehicles in traffic accident)';
-                                            break;
-
-                                        case 'a significant Motor Vehicle Collision.':
-                                            z = 'V49.69 (Unspecified car occupant injured in collision with other motor vehicles in traffic accident)';
-                                            break;
-
-                                        case 'a Motor Vehicle Collision vs a Pedestriant (hit by a car).':
-                                            z = 'V02.10 (Pedestrian on foot injured in collision with two- or three-wheeled motor vehicle in traffic accident)';
-                                            break;
-
-                                        default:
-                                            z = '';
-                                    }
-
-                                    document.getElementById('diagnosis').innerHTML = z;
-
-                                    let o = '';
-                                    switch (document.getElementById("ChiefComplaint").value) {
-                                        case 'visual disturbances.':
-                                            o = '- Cetrifaxone (Oral administration). <br/>- Standard visual exam.';
-                                            break;
-
-                                        case 'a Laceration,':
-                                            o = '- Lidocaine 1% With Epinephrine Injection <br/>- Simple Laceration Repair';
-                                            break;
-
-                                        case 'a Laceration With Foreign Body,':
-                                            o = '- Lidocaine 1% With Epinephrine Injection <br/>- Intermediate Laceration Repair';
-                                            break;
-
-                                        case 'a Head Injury.':
-                                            o = '- Urinary Drug Screen <br/>- Blood Urea Nitrogen <br/>- CT Angio Head With Contrast <br/>- Electrocardiogram, routine ECG with at least 12-leads <br/>- Acetaminophen 1000mg';
-                                            break;
-
-                                        case 'a severe Head Injury.':
-                                            o = '- Urinary Drug Screen <br/>- Blood Urea Nitrogen <br/>- CT Angio Head With Contrast <br/>- Electrocardiogram, routine ECG with at least 12-leads <br/>- Zofran 4mg Intravenous Injection <br/>-Ibuprofen 600mg <br/>- Mental Status Exam';
-                                            break;
-
-                                        case 'an Arm Injury.':
-                                            o = '- X-Ray Forearm 2V <br/>- Acetaminophen 1000mg';
-                                            break;
-
-                                        case 'a Leg Injury.':
-                                            o = '- X-Ray Tibia/Fibia 2V <br/>- Acetaminophen 1000mg';
-                                            break;
-
-                                        case 'a severe Arm Injury.':
-                                            o = '- Sodium Chloride 0.9% 1000ml KCl 100 ml/hr IV <br/>- Propofol 25ml/hr <br/>- X-Ray Forearm 2 Views';
-                                            break;
-
-                                        case 'a severe Leg Injury.':
-                                            o = '- X-Ray Tibia/Fibia 2V <br/>- Morphine 0.4 mg/kg via slow IV injection';
-                                            break;
-
-                                        case 'a Gun Shot Wound,':
-                                            o = '- Lidocaine 1% With Epinephrine Injection <br/>- Ketamine 2.5 mg slow IV <br/>- Exploration of penetrating extremity wound';
-                                            break;
-
-                                        case 'a Puncture Wound,':
-                                            o = '- Lidocaine 1% With Epinephrine Injection <br/>- Ketamine 2.5 mg slow IV <br/>- Exploration of penetrating extremity wound';
-                                            break;
-
-                                        case 'Chest Pain,':
-                                            o = '- Electrocardiogram, routine ECG with at least 12-leads <br/>- Sodium Chloride 0.9% 1000ml KCl 100 ml/hr IV <br/>- Serum Myoglobin <br/>- Creatine kinase-MB <br/>- Cardiac-specific Troponin I and Troponin T <br/>- X-Ray Chest 2V <br/>- Nitroglycerin';
-                                            break;
-
-                                        case 'severe chest pain,':
-                                            o = '- Electrocardiogram, routine ECG with at least 12-leads <br/>- Sodium Chloride 0.9% 1000ml KCl 100 ml/hr IV <br/>- Serum Myoglobin (Myoglobin) <br/>- Creatine kinase-MB (CK-MB) <br/>- Cardiac-specific Troponin I and Troponin T (Troponin) <br/>- X-Ray Chest 2V <br/>- Nitroglycerin <br/>- Asprin <br/>- Benazepril 10mg';
-                                            break;
-
-                                        case 'a Syncopal Episode.':
-                                            o = '- Complete Blood Count (CBC) <br/>- Minor Chemistry <br/>- Cardiac Enzymes <br/>- Basic Metabolic Panel (BMP)<br/>- Fibrin degradation fragment test (D-Dimer) <br/>- Cardiac-specific Troponin I and Troponin T (Troponin) <br/>- CT Angio Head With Contrast <br/>- Electrocardiogram, routine ECG with at least 12-leads';
-                                            break;
-
-                                        case 'a Burn,':
-                                            o = '- Sodium Chloride 0.9% 1000ml KCl 100 ml/hr IV <br/>- Dressings and/or debridement of partial-thickness burns';
-                                            break;
-
-                                        case 'Abdominal Pain.':
-                                            o = '- Sodium Chloride 0.9% 1000ml KCl 100 ml/hr IV <br/>- Complete Blood Count (CBC) <br/>- Minor Chemistry <br/>- Hepatic Function Panel <br/>- Amylase and Lipase <br/>- CT Abdomen Without Contrast <br/>- Electrocardiogram, routine ECG with at least 12-leads <br/>- Morphine 0.4 mg/kg via slow IV injection';
-                                            break;
-
-                                        case 'male genital pain.':
-                                            o = 'NEEDS NOTE';
-                                            break;
-
-                                        case 'a Mild Allergic Reaction.':
-                                            o = '- Intramuscular Epinephrine injection: 0.3 mg of 1:1000 concentration epinephrine solution. <br/>- Continuously monitor the patients vital signs, including heart rate, blood pressure, respiratory rate, and oxygen saturation. <br/>- Observe for any signs of worsening symptoms, such as increased swelling, difficulty breathing, or decreased level of consciousness.';
-                                            break;
-
-                                        case 'a Severe Allergic Reaction.':
-                                            o = '- Intramuscular Epinephrine injection: 0.3 mg of 1:1000 concentration epinephrine solution. <br/>- Continuously monitor the patients vital signs, including heart rate, blood pressure, respiratory rate, and oxygen saturation. <br/>- Observe for any signs of worsening symptoms, such as increased swelling, difficulty breathing, or decreased level of consciousness.';
-                                            break;
-
-                                        case 'a Motor Vehicle Collision.':
-                                            o = '- CT Abdomen Without Contrast <br/>- Tylenol';
-                                            break;
-
-                                        case 'a significant Motor Vehicle Collision.':
-                                            o = '-CT Abdomen Without Contrast <br/>- Sodium Chloride 0.9% 1000ml KCl 100 ml/hr IV <br/>- X-Ray Forearm 2V <br/>- Lidocaine 1% With Epinephrine Injection <br/>- Intermediate Laceration Repair';
-                                            break;
-
-                                        case 'a Motor Vehicle Collision vs a Pedestriant (hit by a car).':
-                                            o = '-CT Abdomen Without Contrast <br/>- Sodium Chloride 0.9% 1000ml KCl 100 ml/hr IV <br/>- X-Ray Forearm 2V <br/>- Lidocaine 1% With Epinephrine Injection <br/>- Intermediate Laceration Repair';
-                                            break;
-
-                                        default:
-                                            o = '';
-                                    }
-
-                                    document.getElementById('orders').innerHTML = o;
-                                }
-
-                            </script>
-                            <br />
-                            <br />
-                            <br />
-
-
-
-                        </div>
-                    </div>
-                </div>
+    <div id="app">
+        <div style="position:absolute; top:30vh; width:100%; text-align:center">
+            <h2></h2>
+            <br />
+            <div style="display:flex; gap:10px; justify-content:center; align-items:center">
+                <div class="spinner-border" role="status"></div>
             </div>
         </div>
     </div>
+
+    <div id="blazor-error-ui">
+        An unhandled error has occurred.
+        <a href="" class="reload">Reload</a>
+        <a class="dismiss">🗙</a>
+    </div>
+    <script src="_framework/blazor.webassembly.js"></script>
 </body>
-
-<footer>
-    <!-- Footer -->
-    <div class="containner-fluid">
-        <div class="footer-inner">
-            <img src="media/logo.png" width="80" height="80"></img>
-            <div class="social">
-                <a href="https://Twitch.tv/DoctorSoup143" class="fab fa-twitch" target="_blank"></a>
-                <a href="https://twitter.com/DoctorSoup143" class="fab fa-twitter" target="_blank"></a>
-                <a href="https://www.youtube.com/channel/UC2LgikNXNwuHifq7XpQD4vA?" class="fab fa-youtube" target="_blank"></a>
-                <a href="https://open.spotify.com/user/qpxp7w8922gn0gd25b6xwv2v7?si=VC5li0fGS8asgzrOJ2JBGg" class="fab fa-spotify" target="_blank"></a>
-                <a href="https://www.instagram.com/DoctorSoup143/" class="fab fa-instagram" target="_blank"></a>
-            </div>
-            <div class="legal">
-                <p>©Copyright DoctorSoup143 - 2021 <a href="http://DoctorSoup143.tv/Privacy">Privacy Policy</a> | <a href="http://DoctorSoup143.tv/Contact">Contact</a></p>
-            </div>
-        </div>
-    </div>
-</footer>
 
 </html>
