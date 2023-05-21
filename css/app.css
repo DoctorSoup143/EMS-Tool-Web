@@ -3,6 +3,8 @@
 html, body {
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
     background-color: #f5f6fb;
+    max-width: 100%;
+    overflow-x: hidden;
 }
 
 h1:focus {
