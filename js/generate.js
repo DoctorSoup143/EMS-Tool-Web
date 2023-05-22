@@ -25,6 +25,10 @@ function generate() {
     // Print out Procedure Note
     let y = '';
     switch (document.getElementById("ChiefComplaint").value) {
+        case 'generalized back pain.':
+            y = 'The patient presented to the Emergency Department (ED) with generalized back pain of progressive onset. There is history of recent trauma reported by the patient at time of arrival. No associated symptoms such as numbness, tingling, or weakness. No constitutional symptoms present. The patient presents in moderate distress due to pain. Vital signs are stable with tenderness and localized pain in the lumbar region. The patient displays Limited range of motion with no neurological deficits and intact peripheral pulses. Following evaluation and pain management, the patients condition improved.The patient is stable, with pain adequately controlled.No acute findings requiring further intervention identified.The patient is safe for discharge home with appropriate pain management instructions and follow - up recommendations.';
+            break;
+
         case 'asphyxia due to submersion.':
             y = 'Upon arrival to the emergency department, the patient was immediately assessed for airway, circulation, and neurological status. The procedures performed included assessment of airway, circulation, and neurological status, supplemental oxygen administration, chest X-ray, ECG, arterial blood gas analysis, neurological evaluation, establishment of intravenous access, and intravenous fluid administration. The patient remained stable throughout the procedures, with no significant abnormalities noted. Further management and observation will be continued as per the attending physicians orders.< br /> <br /> The patients airway was evaluated for patency, and it was found to be clear. Circulation was assessed, and the patients pulse was palpable.Neurological status was evaluated, and the patient was responsive with no signs of neurological deficits.The patient was administered supplemental oxygen via a nasal cannula at a flow rate of 4 liters per minute to maintain adequate oxygenation.A chest X - ray was performed to assess for any signs of pulmonary edema or other abnormalities related to the drowning incident.The results revealed no acute abnormalities.An electrocardiogram was conducted to evaluate the patients cardiac function and identify any potential arrhythmias or ischemic changes. The ECG showed a normal sinus rhythm with no significant abnormalities. An arterial blood gas sample was obtained to assess the patients acid - base balance and oxygenation status.The results indicated mild respiratory alkalosis and hypoxemia, which were consistent with the patients history of drowning. Intravenous access was established using an 18-gauge catheter in the patients left forearm.Proper aseptic technique was employed during the procedure.The patient received Sodium Chloride 0.9 % 1000ml and KCl 100 ml / hr intravenously to correct any electrolyte imbalances and maintain adequate fluid balance.';
             break;
@@ -136,7 +140,11 @@ function generate() {
 
     // Print out Second Procedure Note
     let y2 = '';
-    switch (document.getElementById("ChiefComplaint").value) {
+    switch (document.getElementById("ChiefComplaint2").value) {
+        case 'generalized back pain.':
+            y2 = 'The patient presented to the Emergency Department (ED) with generalized back pain of progressive onset. There is history of recent trauma reported by the patient at time of arrival. No associated symptoms such as numbness, tingling, or weakness. No constitutional symptoms present. The patient presents in moderate distress due to pain. Vital signs are stable with tenderness and localized pain in the lumbar region. The patient displays Limited range of motion with no neurological deficits and intact peripheral pulses. Following evaluation and pain management, the patients condition improved.The patient is stable, with pain adequately controlled.No acute findings requiring further intervention identified.The patient is safe for discharge home with appropriate pain management instructions and follow - up recommendations.';
+            break;
+
         case 'asphyxia due to submersion.':
             y2 = 'Upon arrival to the emergency department, the patient was immediately assessed for airway, circulation, and neurological status. The procedures performed included assessment of airway, circulation, and neurological status, supplemental oxygen administration, chest X-ray, ECG, arterial blood gas analysis, neurological evaluation, establishment of intravenous access, and intravenous fluid administration. The patient remained stable throughout the procedures, with no significant abnormalities noted. Further management and observation will be continued as per the attending physicians orders.< br /> <br /> The patients airway was evaluated for patency, and it was found to be clear. Circulation was assessed, and the patients pulse was palpable.Neurological status was evaluated, and the patient was responsive with no signs of neurological deficits.The patient was administered supplemental oxygen via a nasal cannula at a flow rate of 4 liters per minute to maintain adequate oxygenation.A chest X - ray was performed to assess for any signs of pulmonary edema or other abnormalities related to the drowning incident.The results revealed no acute abnormalities.An electrocardiogram was conducted to evaluate the patients cardiac function and identify any potential arrhythmias or ischemic changes. The ECG showed a normal sinus rhythm with no significant abnormalities. An arterial blood gas sample was obtained to assess the patients acid - base balance and oxygenation status.The results indicated mild respiratory alkalosis and hypoxemia, which were consistent with the patients history of drowning. Intravenous access was established using an 18-gauge catheter in the patients left forearm.Proper aseptic technique was employed during the procedure.The patient received Sodium Chloride 0.9 % 1000ml and KCl 100 ml / hr intravenously to correct any electrolyte imbalances and maintain adequate fluid balance.';
             break;
@@ -252,6 +260,10 @@ function generate() {
     // Print Out Initial Diagnosis
     let Z = '';
     switch (document.getElementById("ChiefComplaint").value) {
+        case 'generalized back pain.':
+            z = 'M54 (Dorsalgia)';
+            break;
+
         case 'asphyxia due to submersion.':
             z = 'T75.1 (Unspecified effects of drowning and nonfatal submersion)';
             break;
@@ -361,6 +373,10 @@ function generate() {
     // Print Out Secondary Diagnosis
     let s = '';
     switch (document.getElementById("ChiefComplaint2").value) {
+        case 'generalized back pain.':
+            s = 'M54 (Dorsalgia)';
+            break;
+
         case 'asphyxia due to submersion.':
             s = 'T75.1 (Unspecified effects of drowning and nonfatal submersion)';
             break;
@@ -470,6 +486,10 @@ function generate() {
     // Print Out Doctors Orders For Dx 1
     let o = '';
     switch (document.getElementById("ChiefComplaint").value) {
+        case 'generalized back pain.':
+            o = '- MRI <br />- Complete Blood Count (CBC) <br />- Minor Chemistry <br />- Hepatic Function Panel <br />- Amylase and Lipase <br />- CT Abdomen Without Contrast <br />- Electrocardiogram, routine ECG with at least 12-leads <br />- Morphine 0.4 mg/kg via slow IV injection <br />- Electromyography (EMG)';
+            break;
+
         case 'asphyxia due to submersion.':
             o = '- Assess airway, circulation, and neurological status. <br />- Supplemental Oxygen. <br />- Chest X-Ray. - Electrocardiogram(ECG). <br />- Arterial blood gas analysis.  <br />- Neurological Evaluation. <br />- Establish Intravenous(IV) access. <br />- Sodium Chloride 0.9 % 1000ml KCl 100 ml / hr IV.';
             break;
@@ -581,6 +601,10 @@ function generate() {
     // Print Out Doctors Orders For Dx 2
     let o2 = '';
     switch (document.getElementById("ChiefComplaint2").value) {
+        case 'generalized back pain.':
+            o2 = '- MRI <br />- Complete Blood Count (CBC) <br />- Minor Chemistry <br />- Hepatic Function Panel <br />- Amylase and Lipase <br />- CT Abdomen Without Contrast <br />- Electrocardiogram, routine ECG with at least 12-leads <br />- Morphine 0.4 mg/kg via slow IV injection <br />- Electromyography (EMG)';
+            break;
+
         case 'asphyxia due to submersion.':
             o2 = '- Assess airway, circulation, and neurological status. <br />- Supplemental Oxygen. <br />- Chest X-Ray. - Electrocardiogram(ECG). <br />- Arterial blood gas analysis.  <br />- Neurological Evaluation. <br />- Establish Intravenous(IV) access. <br />- Sodium Chloride 0.9 % 1000ml KCl 100 ml / hr IV.';
             break;
