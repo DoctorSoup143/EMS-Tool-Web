@@ -25,7 +25,14 @@ function generate() {
     // Print out Procedure Note
     let y = '';
     switch (document.getElementById("ChiefComplaint").value) {
-        case 'generalized back pain.':
+        case 'a headache.':
+            y = 'Needs Procedure.';
+            break;
+
+        case 'neck pain.':
+            y = 'Needs Procedure.';
+            break;
+
             y = 'The patient presented to the Emergency Department (ED) with generalized back pain of progressive onset. There is history of recent trauma reported by the patient at time of arrival. No associated symptoms such as numbness, tingling, or weakness. No constitutional symptoms present. The patient presents in moderate distress due to pain. Vital signs are stable with tenderness and localized pain in the lumbar region. The patient displays Limited range of motion with no neurological deficits and intact peripheral pulses. Following evaluation and pain management, the patients condition improved.The patient is stable, with pain adequately controlled.No acute findings requiring further intervention identified.The patient is safe for discharge home with appropriate pain management instructions and follow - up recommendations.';
             break;
 
@@ -141,6 +148,14 @@ function generate() {
     // Print out Second Procedure Note
     let y2 = '';
     switch (document.getElementById("ChiefComplaint2").value) {
+        case 'a headache.':
+            y2 = 'Needs Procedure.';
+            break;
+
+        case 'neck pain.':
+            y2 = 'Needs Procedure.';
+            break;
+
         case 'generalized back pain.':
             y2 = 'The patient presented to the Emergency Department (ED) with generalized back pain of progressive onset. There is history of recent trauma reported by the patient at time of arrival. No associated symptoms such as numbness, tingling, or weakness. No constitutional symptoms present. The patient presents in moderate distress due to pain. Vital signs are stable with tenderness and localized pain in the lumbar region. The patient displays Limited range of motion with no neurological deficits and intact peripheral pulses. Following evaluation and pain management, the patients condition improved.The patient is stable, with pain adequately controlled.No acute findings requiring further intervention identified.The patient is safe for discharge home with appropriate pain management instructions and follow - up recommendations.';
             break;
@@ -260,6 +275,14 @@ function generate() {
     // Print Out Initial Diagnosis
     let Z = '';
     switch (document.getElementById("ChiefComplaint").value) {
+        case 'a headache.':
+            z = 'R51.9 (Headache, unspecified)';
+            break;
+
+        case 'neck pain.':
+            z = 'NM54.2 (Cervicalgia)';
+            break;
+
         case 'generalized back pain.':
             z = 'M54 (Dorsalgia)';
             break;
@@ -373,6 +396,14 @@ function generate() {
     // Print Out Secondary Diagnosis
     let s = '';
     switch (document.getElementById("ChiefComplaint2").value) {
+        case 'a headache.':
+            s = 'R51.9 (Headache, unspecified)';
+            break;
+
+        case 'neck pain.':
+            s = 'NM54.2 (Cervicalgia)';
+            break;
+
         case 'generalized back pain.':
             s = 'M54 (Dorsalgia)';
             break;
@@ -486,6 +517,14 @@ function generate() {
     // Print Out Doctors Orders For Dx 1
     let o = '';
     switch (document.getElementById("ChiefComplaint").value) {
+        case 'a headache.':
+            o = 'Needs orders.';
+            break;
+
+        case 'neck pain.':
+            o = 'Needs orders.';
+            break;
+
         case 'generalized back pain.':
             o = '- MRI <br />- Complete Blood Count (CBC) <br />- Minor Chemistry <br />- Hepatic Function Panel <br />- Amylase and Lipase <br />- CT Abdomen Without Contrast <br />- Electrocardiogram, routine ECG with at least 12-leads <br />- Morphine 0.4 mg/kg via slow IV injection <br />- Electromyography (EMG)';
             break;
@@ -601,6 +640,14 @@ function generate() {
     // Print Out Doctors Orders For Dx 2
     let o2 = '';
     switch (document.getElementById("ChiefComplaint2").value) {
+        case 'a headache.':
+            o2 = 'Needs orders.';
+            break;
+
+        case 'neck pain.':
+            o2 = 'Needs orders.';
+            break;
+
         case 'generalized back pain.':
             o2 = '- MRI <br />- Complete Blood Count (CBC) <br />- Minor Chemistry <br />- Hepatic Function Panel <br />- Amylase and Lipase <br />- CT Abdomen Without Contrast <br />- Electrocardiogram, routine ECG with at least 12-leads <br />- Morphine 0.4 mg/kg via slow IV injection <br />- Electromyography (EMG)';
             break;
