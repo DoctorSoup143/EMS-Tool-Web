@@ -33,7 +33,8 @@ function generate() {
             y = 'Needs Procedure.';
             break;
 
-            y = 'The patient presented to the Emergency Department (ED) with generalized back pain of progressive onset. There is history of recent trauma reported by the patient at time of arrival. No associated symptoms such as numbness, tingling, or weakness. No constitutional symptoms present. The patient presents in moderate distress due to pain. Vital signs are stable with tenderness and localized pain in the lumbar region. The patient displays Limited range of motion with no neurological deficits and intact peripheral pulses. Following evaluation and pain management, the patients condition improved.The patient is stable, with pain adequately controlled.No acute findings requiring further intervention identified.The patient is safe for discharge home with appropriate pain management instructions and follow - up recommendations.';
+        case 'generalized back pain.':
+            y = 'The patient presented to the Emergency Department(ED) with generalized back pain of progressive onset.There is history of recent trauma reported by the patient at time of arrival.No associated symptoms such as numbness, tingling, or weakness.No constitutional symptoms present.The patient presents in moderate distress due to pain.Vital signs are stable with tenderness and localized pain in the lumbar region.The patient displays Limited range of motion with no neurological deficits and intact peripheral pulses.Following evaluation and pain management, the patients condition improved.The patient is stable, with pain adequately controlled.No acute findings requiring further intervention identified.The patient is safe for discharge home with appropriate pain management instructions and follow - up recommendations.';
             break;
 
         case 'asphyxia due to submersion.':
